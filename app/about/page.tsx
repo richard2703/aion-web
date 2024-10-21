@@ -4,13 +4,13 @@ import Link from "next/link";
 
 export default function page() {
   return (
-    <main className="min-h-screen p-6 ">
+    <main className="min-h-screen p-6 mx-6">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
         <div>
-          <h1 className="text-8xl font-bold text-primary underline decoration-solid decoration-1 z-10">
+          <h1 className="text-4xl font-bold text-primary underline decoration-solid decoration-1 z-10">
             Nosotros
           </h1>
-          <h2 className="text-4xl mt-3 font-bold text-primary z-10">
+          <h2 className="text-2xl mt-3 font-bold text-primary z-10">
             Nuestra misión es ser tu socio de negocio con productos rentables,
             en tendencia con el mercado y de alta calidad
           </h2>
@@ -21,7 +21,7 @@ export default function page() {
         </div>
 
         <div className="mt-3">
-          <h3 className="text-2xl mt-3 font-bold text-primary z-10">
+          <h3 className="text-xl mt-3 font-bold text-primary z-10">
             Aliados de tu proyecto:
           </h3>
           <p className="text-primary mt-3 z-10">
@@ -54,7 +54,7 @@ export default function page() {
           />
         </div>
         <div>
-          <h3 className="text-2xl mt-3 font-bold text-primary z-10">
+          <h3 className="text-xl mt-3 font-bold text-primary z-10">
             Congruentes con un entorno mejor:
           </h3>
           <p className="text-primary mt-3 z-10">
@@ -68,7 +68,7 @@ export default function page() {
       <br />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2:bg-gray-100">
         <div>
-          <h3 className="text-2xl mt-3 font-bold text-primary z-10">
+          <h3 className="text-xl mt-3 font-bold text-primary z-10">
             Con un gran espiritu que nos impulsa:
           </h3>
           <p className="text-primary mt-3 z-10">
@@ -101,7 +101,7 @@ export default function page() {
           />
         </div>
         <div>
-          <h3 className="text-2xl mt-3 font-bold text-primary z-10">
+          <h3 className="text-xl mt-3 font-bold text-primary z-10">
             Comprometidos con el consumidor:
           </h3>
           <p className="text-primary mt-3 z-10">
