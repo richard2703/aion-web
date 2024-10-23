@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+import CarouselGallery from "../ui/carousel";
 
 export default function page() {
   return (
@@ -17,7 +18,12 @@ export default function page() {
         </div>
 
         <div className="row-span-2">
-          <Image src="/Münster.jpg" alt="logo" width={800} height={400} />
+          <Image
+            src="/customers/evilPanda.png"
+            alt="logo"
+            width={800}
+            height={400}
+          />
         </div>
 
         <div className="mt-3">
@@ -46,7 +52,7 @@ export default function page() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2:bg-gray-100">
         <div className="content-center flex justify-center p-4">
           <Image
-            src="/Münster.jpg"
+            src="/customers/evilPanda.png"
             alt="logo"
             width={250}
             height={250}
@@ -80,7 +86,7 @@ export default function page() {
         </div>
         <div className="content-center flex justify-center p-4">
           <Image
-            src="/Münster.jpg"
+            src="/customers/evilPanda.png"
             alt="logo"
             width={250}
             height={250}
@@ -93,7 +99,7 @@ export default function page() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2:bg-gray-100">
         <div className="content-center flex justify-center p-4">
           <Image
-            src="/Münster.jpg"
+            src="/customers/evilPanda.png"
             alt="logo"
             width={250}
             height={250}
@@ -115,6 +121,112 @@ export default function page() {
           </p>
         </div>
       </div>
+      {/* carrusel de imagenes */}
+      <div className="my-5 text-center text-primary">
+        <h2 className="text-2xl mt-3 font-bold text-primary z-10">
+          Momentos AION
+        </h2>
+        <CarouselGallery />
+      </div>
+
+      {/* Testimonios */}
+      <div className="my-5 text-center text-primary">
+        <h2 className="text-2xl mt-3 font-bold text-primary z-10">
+          EN PALABRAS DE NUESTROS CLIENTES
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2:bg-gray-100">
+          <div className="content-center flex justify-center p-4">
+            <Image
+              src="/customers/evilPanda.png"
+              alt="logo"
+              width={250}
+              height={250}
+              className="rounded-full"
+            />
+          </div>
+          <div>
+            <h3 className="text-xl mt-3 font-bold text-primary z-10">
+              Victor Tilla
+            </h3>
+            <p className="text-primary mt-3 z-10">
+              "AION ha sido clave para el crecimiento de mi marca. Su equipo es
+              súper profesional y siempre cumplen con los tiempos de entrega.{" "}
+              <br />
+              ¡Recomendadísimos!"
+            </p>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2:bg-gray-100">
+          <div>
+            <h3 className="text-xl mt-3 font-bold text-primary z-10">
+              Jacky Sieras
+            </h3>
+            <p className="text-primary mt-3 z-10">
+              "Llevo trabajando con AION por más de un año, y no puedo estar más
+              satisfecha. Su atención al detalle y calidad en la producción es
+              incomparable. <br />
+              ¡Son mi aliado perfecto!"
+            </p>
+          </div>
+          <div className="content-center flex justify-center p-4">
+            <Image
+              src="/customers/evilRabbit_white.png"
+              alt="logo"
+              width={250}
+              height={250}
+              className="rounded-full"
+            />
+          </div>
+        </div>
+        <br />
+        <br />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2:bg-gray-100">
+          <div className="content-center flex justify-center p-4">
+            <Image
+              src="/customers/evilPanda.png"
+              alt="logo"
+              width={250}
+              height={250}
+              className="rounded-full"
+            />
+          </div>
+          <div>
+            <h3 className="text-xl mt-3 font-bold text-primary z-10">
+              Aitor Menta
+            </h3>
+            <p className="text-primary mt-3 z-10">
+              "Elegí AION porque entendieron mi visión desde el primer momento.
+              La calidad de sus suplementos es excelente y siempre se preocupan
+              por mejorar. <br />
+              ¡Un socio invaluable!"
+            </p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2:bg-gray-100">
+          <div>
+            <h3 className="text-xl mt-3 font-bold text-primary z-10">
+              Elsa Capuntas
+            </h3>
+            <p className="text-primary mt-3 z-10">
+              "Confiar en AION fue la mejor decisión. Su compromiso con la
+              calidad y su enfoque innovador han elevado nuestros productos a
+              otro nivel. ¡Gracias, AION!'
+            </p>
+          </div>
+          <div className="content-center flex justify-center p-4">
+            <Image
+              src="/customers/evilRabbit_white.png"
+              alt="logo"
+              width={250}
+              height={250}
+              className="rounded-full"
+            />
+          </div>
+        </div>
+      </div>
+
       <span className="text-primary mt-3 z-10">
         ¿Listo contarnos de tu proyecto?
       </span>

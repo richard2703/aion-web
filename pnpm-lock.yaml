@@ -26,12 +26,15 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      lucide-react:
+        specifier: ^0.453.0
+        version: 0.453.0(react@19.0.0-rc-f38c22b244-20240704)
       next:
         specifier: 15.0.0-canary.56
-        version: 15.0.0-canary.56(react-dom@19.0.0-rc-f38c22b244-20240704)(react@19.0.0-rc-f38c22b244-20240704)
+        version: 15.0.0-canary.56(react-dom@19.0.0-rc-f38c22b244-20240704(react@19.0.0-rc-f38c22b244-20240704))(react@19.0.0-rc-f38c22b244-20240704)
       next-auth:
         specifier: 5.0.0-beta.19
-        version: 5.0.0-beta.19(next@15.0.0-canary.56)(react@19.0.0-rc-f38c22b244-20240704)
+        version: 5.0.0-beta.19(next@15.0.0-canary.56(react-dom@19.0.0-rc-f38c22b244-20240704(react@19.0.0-rc-f38c22b244-20240704))(react@19.0.0-rc-f38c22b244-20240704))(react@19.0.0-rc-f38c22b244-20240704)
       postcss:
         specifier: 8.4.38
         version: 8.4.38
@@ -662,6 +665,11 @@ packages:
   lru-cache@10.2.2:
     resolution: {integrity: sha512-9hp3Vp2/hFQUiIwKo8XCeFVnrg8Pk3TYNPIR7tJADKi5YfcF7vEaK7avFHTlSy3kOKYaJQaalfEo6YuXdceBOQ==}
     engines: {node: 14 || >=16.14}
+
+  lucide-react@0.453.0:
+    resolution: {integrity: sha512-kL+RGZCcJi9BvJtzg2kshO192Ddy9hv3ij+cPrVPWSRzgCWCVazoQJxOjAwgK53NomL07HB7GPHW120FimjNhQ==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc
 
   make-dir@3.1.0:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
@@ -1686,6 +1694,10 @@ snapshots:
 
   lru-cache@10.2.2: {}
 
+  lucide-react@0.453.0(react@19.0.0-rc-f38c22b244-20240704):
+    dependencies:
+      react: 19.0.0-rc-f38c22b244-20240704
+
   make-dir@3.1.0:
     dependencies:
       semver: 6.3.1
@@ -1732,13 +1744,13 @@ snapshots:
 
   nanoid@3.3.7: {}
 
-  next-auth@5.0.0-beta.19(next@15.0.0-canary.56)(react@19.0.0-rc-f38c22b244-20240704):
+  next-auth@5.0.0-beta.19(next@15.0.0-canary.56(react-dom@19.0.0-rc-f38c22b244-20240704(react@19.0.0-rc-f38c22b244-20240704))(react@19.0.0-rc-f38c22b244-20240704))(react@19.0.0-rc-f38c22b244-20240704):
     dependencies:
       '@auth/core': 0.32.0
-      next: 15.0.0-canary.56(react-dom@19.0.0-rc-f38c22b244-20240704)(react@19.0.0-rc-f38c22b244-20240704)
+      next: 15.0.0-canary.56(react-dom@19.0.0-rc-f38c22b244-20240704(react@19.0.0-rc-f38c22b244-20240704))(react@19.0.0-rc-f38c22b244-20240704)
       react: 19.0.0-rc-f38c22b244-20240704
 
-  next@15.0.0-canary.56(react-dom@19.0.0-rc-f38c22b244-20240704)(react@19.0.0-rc-f38c22b244-20240704):
+  next@15.0.0-canary.56(react-dom@19.0.0-rc-f38c22b244-20240704(react@19.0.0-rc-f38c22b244-20240704))(react@19.0.0-rc-f38c22b244-20240704):
     dependencies:
       '@next/env': 15.0.0-canary.56
       '@swc/helpers': 0.5.11
@@ -1845,8 +1857,9 @@ snapshots:
   postcss-load-config@4.0.2(postcss@8.4.38):
     dependencies:
       lilconfig: 3.1.1
-      postcss: 8.4.38
       yaml: 2.4.3
+    optionalDependencies:
+      postcss: 8.4.38
 
   postcss-nested@6.0.1(postcss@8.4.38):
     dependencies:
@@ -2131,7 +2144,7 @@ snapshots:
   wrappy@1.0.2: {}
 
   ws@8.14.2(bufferutil@4.0.8)(utf-8-validate@6.0.3):
-    dependencies:
+    optionalDependencies:
       bufferutil: 4.0.8
       utf-8-validate: 6.0.3
 
