@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+import CarouselGallery from "../ui/carousel";
 
 export default function page() {
   return (
@@ -115,6 +116,17 @@ export default function page() {
           </p>
         </div>
       </div>
+      <br />
+      <br />
+      <div className="text-center text-primary">
+        <h2 className="text-2xl mt-3 font-bold text-primary z-10">
+          Momentos AION
+        </h2>
+        <CarouselGallery />
+      </div>
+      <br />
+      <br />
+
       <span className="text-primary mt-3 z-10">
         ¿Listo contarnos de tu proyecto?
       </span>
