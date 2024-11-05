@@ -39,7 +39,7 @@ const ContactForm: React.FC = () => {
     <section className="p-4">
       <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
         <div>
-          <label htmlFor="name" className="block text-primary">
+          <label htmlFor="name" className="block ">
             Tu nombre
           </label>
           <input
@@ -54,7 +54,7 @@ const ContactForm: React.FC = () => {
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-primary">
+          <label htmlFor="email" className="block ">
             Tu correo electrónico
           </label>
           <input
@@ -69,7 +69,7 @@ const ContactForm: React.FC = () => {
         </div>
 
         <div>
-          <label htmlFor="phone" className="block text-primary">
+          <label htmlFor="phone" className="block ">
             Teléfono
           </label>
           <div className="flex items-center">
@@ -86,7 +86,22 @@ const ContactForm: React.FC = () => {
         </div>
 
         <div>
-          <label htmlFor="comments" className="block text-primary">
+          <label htmlFor="phone" className="block ">
+            Aque te dedicas
+          </label>
+          <select
+            name="phone"
+            className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
+          >
+            <option value="">Seleccione una opci&oacute;n</option>
+            <option value="asesor">Asesor</option>
+            <option value="negocio">Dueño de negocio</option>
+            <option value="other">Otro</option>
+          </select>
+        </div>
+
+        <div>
+          <label htmlFor="comments" className="block ">
             ¿Quieres comentarnos algo?
           </label>
           <textarea
@@ -109,7 +124,7 @@ const ContactForm: React.FC = () => {
               onChange={handleChange}
               className="w-4 h-4 text-purple-600 border-gray-300 rounded focus:ring-purple-500"
             />
-            <span className="text-primary">
+            <span>
               He leído y acepto el{" "}
               <a href="#" className="text-purple-600 underline">
                 Aviso de privacidad

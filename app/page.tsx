@@ -1,161 +1,191 @@
-import Image from "next/image";
+"use client";
+import React, { useState, useEffect, use } from "react";
+import {
+  ArrowRight,
+  Check,
+  Users,
+  BarChart,
+  Shield,
+  CheckCircle,
+} from "lucide-react";
 
 export default function Page() {
+  const [text, setText] = useState("");
+  const fullText =
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, neque provident quae, illo impedit sint aliquam amet deleniti pariatur adipisci excepturi dolore. Voluptates consequatur ab rem recusandae libero excepturi sapiente!";
+
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (index < fullText.length) {
+      const timer = setTimeout(() => {
+        setText((prev) => prev + fullText[index]);
+        setIndex((prev) => prev + 1);
+      }, 50); // Ajusta este valor para cambiar la velocidad de escritura
+
+      return () => clearTimeout(timer);
+    }
+  }, [index, fullText]);
+
   return (
-    <main className="min-h-screen p-6">
-      {/* Decoraciones de fondo */}
-      <div className="h-40 w-2/12 blur-2xl animate-pulse rounded-full b bg-auxiliary1 absolute top-0 z-0"></div>
-      <div className="h-1/3 w-2/12 blur-3xl animate-pulse rounded-full b bg-auxiliary1 absolute right-0 z-0"></div>
-      <div className="h-40 w-40 blur-3xl animate-pulse rounded-full b bg-auxiliary2 absolute top-200 right-0 inset-y-1/2 z-0"></div>
-      {/* fin de decoraciones de fondo */}
-
-      {/* Row 1 */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
-        <h1 className="text-8xl font-bold text-primary underline decoration-solid decoration-1 z-10">
-          Hola y bienvenido a <br /> AION!
-        </h1>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mt-6">
-        <p className="text-xl text-primary col-start-2 z-10">
-          Has llegado a esta página porque alguien te lo recomendó, o el
-          algoritmo en redes te mostró algo que te Intereso, o porque tienes una
-          busqueda activa de "maquila" en suplementos alimenticios, queremos
-          conocerte y saber como te podemos ayudar.
-        </p>
-      </div>
-      {/* TODO: mejorar la alineacion de las cards */}
-      {/* Row 2 */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mt-6 flex content-center gap-6">
-        <div className="flex items-center max-w-lg bg-secondary rounded-xl p-4 text-primary">
-          <div className="w-1/3">
-            <Image
-              src="/customers/evil-rabbit.png"
-              alt="logo"
-              width={100}
-              height={100}
-              className="rounded-lg"
-            />
-          </div>
-
-          <div className="w-2/3 pl-4">
-            <h2 className="text-lg font-bold">
-              ¿Tienes un gimnasio y quieres expandir tus líneas de negocio?
-            </h2>
-          </div>
-        </div>
-
-        <div className="flex items-center max-w-lg bg-auxiliary1 rounded-xl p-4 text-primary">
-          <div className="w-1/3">
-            <Image
-              src="/customers/evil-rabbit.png"
-              alt="logo"
-              width={100}
-              height={100}
-              className="rounded-lg"
-            />
-          </div>
-
-          <div className="w-2/3 pl-4">
-            <h2 className="text-lg font-bold">
-              ¿Ya te dedicas al ramo naturista?
-            </h2>
-          </div>
-        </div>
-      </div>
-
-      {/* Row 3 */}
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 mt-6 flex justify-between gap-4">
-        <div className="flex items-center max-w-lg bg-auxiliary2 rounded-xl p-4 text-primary">
-          <div className="w-1/3">
-            <Image
-              src="/customers/evil-rabbit.png"
-              alt="logo"
-              width={100}
-              height={100}
-              className="rounded-lg"
-            />
-          </div>
-
-          <div className="w-2/3 pl-4">
-            <h2 className="text-lg font-bold">
-              ¿Eres creador de contenido y buscas un producto que te permita
-              monetizar tu audiencia?
-            </h2>
-          </div>
-        </div>
-
-        <div className="flex items-center max-w-lg bg-auxiliary2 rounded-xl p-4 text-primary">
-          <div className="w-1/3">
-            <Image
-              src="/customers/evil-rabbit.png"
-              alt="logo"
-              width={100}
-              height={100}
-              className="rounded-lg"
-            />
-          </div>
-
-          <div className="w-2/3 pl-4">
-            <h2 className="text-lg font-bold">
-              ¿Eres profecional de la salud y ves una necesidad en tus pacientes
-              y buscas algo de alta calidad?
-            </h2>
-          </div>
-        </div>
-
-        <div className="flex items-center max-w-lg bg-auxiliary1 rounded-xl p-4 text-primary">
-          <div className="w-1/3">
-            <Image
-              src="/customers/evil-rabbit.png"
-              alt="logo"
-              width={100}
-              height={100}
-              className="rounded-lg"
-            />
-          </div>
-
-          <div className="w-2/3 pl-4">
-            <h2 className="text-lg font-bold">¿Buscas un emprendimiento?</h2>
-          </div>
-        </div>
-      </div>
-
-      {/* Row 4 */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mt-6 flex">
-        <div className="content-center ">
-          <div className="flex items-center max-w-lg bg-secondary rounded-xl p-4 text-primary">
-            <div className="w-1/3">
-              <Image
-                src="/customers/evil-rabbit.png"
-                alt="logo"
-                width={100}
-                height={100}
-                className="rounded-lg"
-              />
-            </div>
-
-            <div className="w-2/3 pl-4">
-              <h2 className="text-lg font-bold">
-                ¿Quieres desarrollar productos que ayuden a mejorar la calidad
-                de vida de la gente?
-              </h2>
-            </div>
-          </div>
-        </div>
-        <div>
-          <h2 className="text-4xl font-bold text-primary underline decoration-solid decoration-1 z-10">
-            CONOCE NUESTRO PROCESO DE DESARROLLO:
-          </h2>
-          <p className="text-primary text-xl">
-            ¡Has llegado al lugar indicado! Vive la experiencia AION. Nuestro
-            enfoque es totalmente personalizado: trabajamos contigo para
-            entender tus necesidades y ofrecerte asesoria tecnica que te ayude a
-            destacar en el mercado asegurando la calidad, los tiempos de entrega
-            y los costos de producción.
+    <main className="bg-gray-50">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-slate-950 from-50% via-green-800 via-90% to-purple-800 to-100%">
+        <div className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
+            Transforma tu Negocio
+          </h1>
+          <p className="mt-6 max-w-2xl mx-auto text-xl text-indigo-100 h-20">
+            {text}
           </p>
+          <div className="mt-10">
+            <a
+              href="#contact"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-white hover:bg-indigo-50"
+            >
+              Comienza Ahora
+              <ArrowRight className="ml-2" size={20} />
+            </a>
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            ¿Por qué elegirnos?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            ].map((reason, index) => (
+              <div key={index} className="flex items-center">
+                <CheckCircle className="text-green-500 mr-4" size={24} />
+                <p className="text-lg">{reason}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center">
+            Características Principales
+          </h2>
+          <div className="mt-12 grid gap-8 grid-cols-1 md:grid-cols-3">
+            {[
+              {
+                icon: <Users className="h-8 w-8 text-blue-600" />,
+                title:
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                description:
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+              },
+              {
+                icon: <BarChart className="h-8 w-8 text-blue-600" />,
+                title:
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                description:
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+              },
+              {
+                icon: <Shield className="h-8 w-8 text-blue-600" />,
+                title: "Seguridad Robusta",
+                description:
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+              },
+            ].map((feature, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6">
+                <div className="flex items-center justify-center w-12 h-12 rounded-md bg-blue-100 mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center mb-12">
+            Lo que dicen nuestros clientes
+          </h2>
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                name: "María García",
+                role: "CEO, TechStart",
+                content:
+                  "Esta plataforma ha revolucionado la forma en que manejamos nuestros proyectos. Altamente recomendado.",
+              },
+              {
+                name: "Carlos Rodríguez",
+                role: "Director de Marketing, GrowthCo",
+                content:
+                  "Increíble herramienta que ha aumentado nuestra productividad en un 200%. No podríamos estar más satisfechos.",
+              },
+              {
+                name: "Ana Martínez",
+                role: "Freelancer",
+                content:
+                  "Como profesional independiente, esta plataforma me ha ayudado a organizar mi trabajo y mejorar mi eficiencia.",
+              },
+            ].map((testimonial, index) => (
+              <div key={index} className="bg-gray-50 rounded-lg p-6 shadow">
+                <p className="text-gray-600 mb-4">"{testimonial.content}"</p>
+                <div className="flex items-center">
+                  <div className="flex-shrink-0">
+                    <img
+                      className="h-10 w-10 rounded-full"
+                      src={`https://i.pravatar.cc/150?img=${index + 1}`}
+                      alt={testimonial.name}
+                    />
+                  </div>
+                  <div className="ml-3">
+                    <p className="text-sm font-medium text-gray-900">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section id="contact" className="bg-secondary py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-white sm:text-4xl text-center mb-8">
+            ¿Listo para empezar?
+          </h2>
+          <p className="text-xl text-blue-100 text-center mb-8">
+            Únete a miles de empresas que ya están transformando su negocio con
+            nuestra plataforma.
+          </p>
+          <div className="flex justify-center">
+            <a
+              href="#"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50"
+            >
+              Solicita una Demo
+              <ArrowRight className="ml-2" size={20} />
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

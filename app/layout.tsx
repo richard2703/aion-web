@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={`${montserrat.className} bg-background`}>
+      <body className={`${montserrat.className} bg-gray-50`}>
         {/* <div className="bg-top bg-[url('/home-bg.png')] bg-no-repeat bg-cover">
         </div> */}
         <Header></Header>

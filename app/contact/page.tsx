@@ -5,30 +5,41 @@ import ContactForm from "../ui/contact-form";
 
 export default function page() {
   return (
-    <main className="min-h-screen p-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
-        <div>
-          <h1 className="text-8xl font-bold text-primary underline decoration-solid decoration-1 z-10">
-            Contacto
-          </h1>
-          <h2 className="text-4xl mt-3 font-bold text-primary z-10">
-            ¿Listo para iniciar esta aventura?
-          </h2>
-          <h3 className="text-2xl mt-3 font-bold text-primary z-10">
-            ¿Aun tienes mas dudas?
-          </h3>
-          <p className="text-primary mt-3 z-10">¡Queremos conocerte!</p>
-          <div className="mt-3">
-            <ContactForm />
-          </div>
+    <div className="bg-gray-100 min-h-screen">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-slate-950 from-70%  to-green-800 text-white py-20">
+        <div className="container mx-auto px-6">
+          <h1 className="text-4xl font-bold mb-4">Contacto</h1>
+          <p className="text-xl">
+            ¿Listo para iniciar esta aventura? <br />
+          </p>
         </div>
-        <div>
+      </section>
+
+      {/* Company Overview */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            ¿Aun tienes mas dudas?
+          </h2>
+          <h3 className="text-2xl text-center mb-8">¡Queremos conocerte!</h3>
+          <ContactForm />
+        </div>
+      </section>
+
+      {/* Mission and Vision */}
+
+      <section className="bg-gray-200 py-20">
+        <div className="container mx-auto px-6 h-96">
           <iframe
-            src={`https://maps.app.goo.gl/YNUnv72k6vJF2XiB7?key=YOUR_API_KEY`}
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.1662427401993!2d-103.40689861492446!3d20.662814551006026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ae7f7b0e676b%3A0xb4ceb55da7f61d2b!2sC.%20de%20la%20Tilma%20294%2C%20Chapalita%20Sur%2C%2045040%20Zapopan%2C%20Jal.!5e0!3m2!1ses-419!2smx!4v1730842784837!5m2!1ses-419!2smx"
+            width="600"
+            height="450"
             style={{ width: "100%", height: "100%", border: "0" }}
+            loading="lazy"
           ></iframe>
         </div>
-      </div>
-    </main>
+      </section>
+    </div>
   );
 }

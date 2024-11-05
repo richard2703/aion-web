@@ -1,170 +1,168 @@
-import Image from "next/image";
 import React from "react";
-import Link from "next/link";
+import Image from "next/image";
+import { Cpu } from "lucide-react";
 
 export default function page() {
   return (
-    <main className="min-h-screen p-6 mx-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3">
-        <div>
-          <h1 className="text-4xl font-bold text-primary underline decoration-solid decoration-1 z-10">
-            Tecnología
-          </h1>
-          <h2 className="text-2xl mt-3 font-bold text-primary z-10">
-            Cuando decimos que nuestros procesos tienen tecnologia en el ADN, es
-            por que nos lo tomamos en serio
-          </h2>
-        </div>
-
-        <div className="row-span-6 w-full h-full relative">
-          <Image
-            src="/Münster.jpg"
-            alt="logo"
-            layout="fill" // Fills the parent container
-            objectFit="cover" // Ensures the image covers the entire container
-          />
-        </div>
-
-        <div className="flex items-center max-w-lg rounded-xl p-4 text-primary col-start-1">
-          <div className="w-1/3 ">
-            <Image
-              src="/customers/evil-rabbit.png"
-              alt="logo"
-              width={100}
-              height={100}
-              className="rounded-full"
-            />
-          </div>
-
-          <div className="w-2/3 pl-4">
-            <h3 className="font-bold">Tecnologia de punta en la producción:</h3>
-            <p>Maquinaria de ultima generación</p>
-          </div>
-        </div>
-
-        <div className="flex items-center max-w-lg rounded-xl p-4 text-primary col-start-1">
-          <div className="w-1/3">
-            <Image
-              src="/customers/evil-rabbit.png"
-              alt="logo"
-              width={100}
-              height={100}
-              className="rounded-full"
-            />
-          </div>
-
-          <div className="w-2/3 pl-4">
-            <h3 className="font-bold">Trazabilidad:</h3>
-            <p>
-              Un sistema que siempre permitira conocer todas las variables de
-              tus productos
-            </p>
-          </div>
-        </div>
-        <div className="flex items-center max-w-lg rounded-xl p-4 text-primary col-start-1">
-          <div className="w-1/3">
-            <Image
-              src="/customers/evil-rabbit.png"
-              alt="logo"
-              width={100}
-              height={100}
-              className="rounded-full"
-            />
-          </div>
-
-          <div className="w-2/3 pl-4">
-            <h3 className="font-bold">Sistemas de informacion:</h3>
-            <p>Conoce el proceso de tus productos en tiempo real</p>
-          </div>
-        </div>
-        <div className="flex items-center max-w-lg rounded-xl p-4 text-primary col-start-1">
-          <div className="w-1/3">
-            <Image
-              src="/customers/evil-rabbit.png"
-              alt="logo"
-              width={100}
-              height={100}
-              className="rounded-full"
-            />
-          </div>
-
-          <div className="w-2/3 pl-4">
-            <h3 className="font-bold">
-              Cumplimiento a la regulacion de la industria:
-            </h3>
-            <p>Cumplimos con todo 10 que requiere la autoridad y más</p>
-          </div>
-        </div>
-        <div className="flex items-center max-w-lg rounded-xl p-4 text-primary col-start-1">
-          <div className="w-1/3">
-            <Image
-              src="/customers/evil-rabbit.png"
-              alt="logo"
-              width={100}
-              height={100}
-              className="rounded-full"
-            />
-          </div>
-
-          <div className="w-2/3 pl-4">
-            <h3 className="font-bold">Personal calificado:</h3>
-            <p>Todo el personal cuenta con certificacion en su proceso.</p>
-          </div>
-        </div>
-      </div>
-      <br />
-      <br />
-      <div className="grid grid-cols-1">
-        <div className="content-center flex justify-center p-4 bg-primary rounded-full">
-          <Image
-            src="/certifications.png"
-            alt="logo"
-            width={250}
-            height={250}
-            className="rounded-full"
-          />
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2:bg-gray-100">
-        <div className="content-center flex justify-center p-4">
-          <Image
-            src="/Münster.jpg"
-            alt="logo"
-            width={250}
-            height={250}
-            className="rounded-full"
-          />
-        </div>
-        <div>
-          <h3 className="mt-3 font-bold text-primary z-10">
-            CONOCE NUESTRA TECNOLOGÍA
-          </h3>
-          <p className="text-primary mt-3 z-10 text-right">
-            Te invitamos a conocer nuestro moderno centro de ingeniería, nuestro
-            equipo de especialistas trabajan arduamente para crear formulaciones
-            y prototipos, asegurando que recibas tus dummies en un plazo de 5 a
-            20 días, dependiendo del tipo de producto.
-            <br />
-            Si deseas contar con un socio que conoce el mercado y que pone a tu
-            disposición toda la experiencia para crear tu producto contáctanos.
-            Permítenos proporcionarte todo 10 necesario para hacer de tu idea
-            una empresa rentable.
+    <div className="bg-gray-100 min-h-screen">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-slate-950 from-70%  to-[#101566] text-white py-20">
+        <div className="container mx-auto px-6 max-w-screen-lg">
+          <h1 className="text-4xl font-bold mb-4">Nuestras Tecnologías</h1>
+          <p className="text-xl">
+            Suspendisse dui mi, eleifend vel mauris in, mattis sagittis lorem.
           </p>
         </div>
-      </div>
-      <br />
-      <br />
+      </section>
 
-      <span className="text-primary mt-3 z-10">
-        ¿Listo contarnos de tu proyecto?
-      </span>
-      <br />
-      <button className="rounded-md border text-primary p-2 hover:bg-gray-100 hover:text-background">
-        <Link key={"CONTÁCTO"} href={"/contact"}>
-          <p className="hidden md:block">{"CONTÁCTO"}</p>
-        </Link>
-      </button>
-    </main>
+      {/* Core Technologies */}
+      <section className="py-20">
+        <div className="container mx-auto px-6 max-w-screen-lg">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Tecnologías Clave
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              {
+                icon: <Cpu size={40} />,
+                title: "Lorem ipsum",
+                description:
+                  "Suspendisse dui mi, eleifend vel mauris in, mattis sagittis lorem.",
+              },
+              {
+                icon: <Cpu size={40} />,
+                title: "Lorem ipsum",
+                description:
+                  "Suspendisse dui mi, eleifend vel mauris in, mattis sagittis lorem.",
+              },
+              {
+                icon: <Cpu size={40} />,
+                title: "Lorem ipsum",
+                description:
+                  "Suspendisse dui mi, eleifend vel mauris in, mattis sagittis lorem.",
+              },
+              {
+                icon: <Cpu size={40} />,
+                title: "Lorem ipsum",
+                description:
+                  "Suspendisse dui mi, eleifend vel mauris in, mattis sagittis lorem.",
+              },
+            ].map((tech, index) => (
+              <div key={index} className="text-center">
+                <div className="text-blue-600 mb-4 flex justify-center">
+                  {tech.icon}
+                </div>
+                <h3 className="text-2xl font-bold mb-2">{tech.title}</h3>
+                <p className="text-gray-600">{tech.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tools and Frameworks */}
+      <section className="bg-gray-200 py-20">
+        <div className="container mx-auto px-6 max-w-screen-lg">
+          <h2 className="text-3xl font-bold text-center mb-12">Herramientas</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Lorem ipsum",
+                description:
+                  "Suspendisse dui mi, eleifend vel mauris in, mattis sagittis lorem.",
+              },
+              {
+                name: "Lorem ipsum",
+                description:
+                  "Suspendisse dui mi, eleifend vel mauris in, mattis sagittis lorem.",
+              },
+              {
+                name: "Lorem ipsum",
+                description:
+                  "Suspendisse dui mi, eleifend vel mauris in, mattis sagittis lorem.",
+              },
+              {
+                name: "Lorem ipsum",
+                description:
+                  "Suspendisse dui mi, eleifend vel mauris in, mattis sagittis lorem.",
+              },
+              {
+                name: "Lorem ipsum",
+                description:
+                  "Suspendisse dui mi, eleifend vel mauris in, mattis sagittis lorem.",
+              },
+              {
+                name: "Lorem ipsum",
+                description:
+                  "Suspendisse dui mi, eleifend vel mauris in, mattis sagittis lorem.",
+              },
+            ].map((tool, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-md text-center"
+              >
+                <h3 className="text-xl font-bold mb-2 text-blue-600">
+                  {tool.name}
+                </h3>
+                <p className="text-gray-700">{tool.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Software and Services */}
+      <section className="py-20">
+        <div className="container mx-auto px-6 max-w-screen-lg">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Software y Servicios Utilizados
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                name: "Lorem ipsum",
+                description:
+                  "Suspendisse dui mi, eleifend vel mauris in, mattis sagittis lorem.",
+              },
+              {
+                name: "Lorem ipsum",
+                description:
+                  "Suspendisse dui mi, eleifend vel mauris in, mattis sagittis lorem.",
+              },
+              {
+                name: "Lorem ipsum",
+                description:
+                  "Suspendisse dui mi, eleifend vel mauris in, mattis sagittis lorem.",
+              },
+              {
+                name: "Lorem ipsum",
+                description:
+                  "Suspendisse dui mi, eleifend vel mauris in, mattis sagittis lorem.",
+              },
+              {
+                name: "Lorem ipsum",
+                description:
+                  "Suspendisse dui mi, eleifend vel mauris in, mattis sagittis lorem.",
+              },
+              {
+                name: "Lorem ipsum",
+                description:
+                  "Suspendisse dui mi, eleifend vel mauris in, mattis sagittis lorem.",
+              },
+            ].map((service, index) => (
+              <div
+                key={index}
+                className="text-center bg-white p-8 rounded-lg shadow-md"
+              >
+                <h3 className="text-2xl font-bold text-blue-600 mb-4">
+                  {service.name}
+                </h3>
+                <p className="text-gray-700">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
