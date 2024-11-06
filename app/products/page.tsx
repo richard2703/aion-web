@@ -6,25 +6,25 @@ export default function page() {
     {
       title: "Investigación de Ingredientes",
       description:
-        "Analizamos las últimas investigaciones científicas para seleccionar ingredientes de alta calidad y efectividad comprobada, asegurando la seguridad y los beneficios de cada suplemento.",
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore rem voluptatum velit, incidunt omnis vel! Tempore, consectetur.",
       image: "/Münster.jpg",
     },
     {
       title: "Formulación Precisa",
       description:
-        "Nuestros expertos en nutrición y salud formulan cuidadosamente cada suplemento, equilibrando dosis y combinaciones para maximizar los efectos deseados.",
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore rem voluptatum velit, incidunt omnis vel! Tempore, consectetur.",
       image: "/Münster.jpg",
     },
     {
       title: "Pruebas de Calidad",
       description:
-        "Realizamos pruebas rigurosas en cada lote para verificar la pureza, potencia y seguridad de los ingredientes, asegurando la calidad de nuestros productos.",
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore rem voluptatum velit, incidunt omnis vel! Tempore, consectetur.",
       image: "/Münster.jpg",
     },
     {
       title: "Producción y Empaque",
       description:
-        "Nuestros suplementos se producen en instalaciones de última generación, siguiendo estrictos estándares de seguridad y control para garantizar su integridad y eficacia.",
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore rem voluptatum velit, incidunt omnis vel! Tempore, consectetur.",
       image: "/Münster.jpg",
     },
   ];
@@ -89,9 +89,9 @@ export default function page() {
                 Laboratorios de Calidad
               </h3>
               <p className="text-slate-700">
-                Nuestras instalaciones están equipadas con la última tecnología
-                para el análisis de ingredientes, asegurando la pureza y
-                eficacia de cada suplemento.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Inventore rem voluptatum velit, incidunt omnis vel! Tempore,
+                consectetur.
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md">
@@ -99,9 +99,9 @@ export default function page() {
                 Equipo Experto
               </h3>
               <p className="text-slate-700">
-                Contamos con un equipo de expertos en salud y nutrición que
-                supervisan cada etapa del proceso, comprometidos con el
-                desarrollo de suplementos efectivos y seguros.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Inventore rem voluptatum velit, incidunt omnis vel! Tempore,
+                consectetur.
               </p>
             </div>
           </div>
@@ -115,8 +115,8 @@ export default function page() {
             ¿Interesado en Nuestros Suplementos?
           </h2>
           <p className="text-xl mb-8">
-            Conoce más sobre nuestros productos o consulta a nuestros expertos
-            para saber cuál suplemento es adecuado para ti.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
+            rem voluptatum velit, incidunt omnis vel! Tempore, consectetur.
           </p>
           <a
             href="#"
