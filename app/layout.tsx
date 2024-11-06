@@ -1,4 +1,4 @@
-import { montserrat } from "./ui/font";
+import { montserrat, roboto } from "./ui/font";
 import "./ui/global.css";
 export const metadata = {
   title: "Next.js",
@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={`${montserrat.className} bg-gray-50`}>
+      <body className={`${roboto.className} bg-gray-50`}>
         {/* <div className="bg-top bg-[url('/home-bg.png')] bg-no-repeat bg-cover">
         </div> */}
         <Header></Header>
