@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const navItems = [
   { name: "Inicio", href: "/" },
-  { name: "Desarrollo", href: "/development" },
+  { name: "Desarrollo", href: "/products" },
   { name: "Nosotros", href: "/about" },
   { name: "Tecnología", href: "/technology" },
   { name: "Contácto", href: "/contact" },
@@ -21,14 +21,14 @@ export default function Header() {
   return (
     <nav className="bg-gray-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0">
               <Image
                 src="/Logotipo_AION2bco.png"
                 alt="logo"
-                width={80}
-                height={30}
+                width={150}
+                height={150}
                 className="mx-2"
               />
             </Link>
@@ -39,7 +39,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-primary hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-primary hover:bg-opacity-20 hover:text-green-600 px-3 py-2 rounded-md font-medium"
                 >
                   {item.name}
                 </Link>

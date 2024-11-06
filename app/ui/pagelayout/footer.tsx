@@ -88,7 +88,7 @@ const Footer = () => {
             <div className="flex space-x-4">
               {[
                 { icon: Facebook, href: "https://facebook.com" },
-                { icon: Twitter, href: "https://twitter.com" },
+                { icon: Twitter, href: "https://x.com/" },
                 { icon: Instagram, href: "https://instagram.com" },
                 { icon: Linkedin, href: "https://linkedin.com" },
               ].map((social, index) => (

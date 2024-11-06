@@ -11,21 +11,33 @@ import {
 
 export default function Page() {
   const [text, setText] = useState("");
+  const [index, setIndex] = useState(0);
+  const [finished, setFinished] = useState(false);
   const fullText =
     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, neque provident quae, illo impedit sint aliquam amet deleniti pariatur adipisci excepturi dolore. Voluptates consequatur ab rem recusandae libero excepturi sapiente!";
-
-  const [index, setIndex] = useState(0);
 
   useEffect(() => {
     if (index < fullText.length) {
       const timer = setTimeout(() => {
         setText((prev) => prev + fullText[index]);
         setIndex((prev) => prev + 1);
-      }, 50); // Ajusta este valor para cambiar la velocidad de escritura
+      }, 50);
 
       return () => clearTimeout(timer);
+    } else {
+      const timer = setTimeout(() => {
+        setFinished(true);
+      }, 2000);
     }
   }, [index, fullText]);
+
+  useEffect(() => {
+    if (finished) {
+      setText("");
+      setIndex(0);
+      setFinished(false);
+    }
+  }, [finished]);
 
   return (
     <main className="bg-gray-50">
@@ -127,19 +139,19 @@ export default function Page() {
                 name: "María García",
                 role: "CEO, TechStart",
                 content:
-                  "Esta plataforma ha revolucionado la forma en que manejamos nuestros proyectos. Altamente recomendado.",
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               },
               {
                 name: "Carlos Rodríguez",
                 role: "Director de Marketing, GrowthCo",
                 content:
-                  "Increíble herramienta que ha aumentado nuestra productividad en un 200%. No podríamos estar más satisfechos.",
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               },
               {
                 name: "Ana Martínez",
                 role: "Freelancer",
                 content:
-                  "Como profesional independiente, esta plataforma me ha ayudado a organizar mi trabajo y mejorar mi eficiencia.",
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               },
             ].map((testimonial, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-6 shadow">
@@ -173,14 +185,15 @@ export default function Page() {
           </h2>
           <p className="text-xl text-blue-100 text-center mb-8">
             Únete a miles de empresas que ya están transformando su negocio con
-            nuestra plataforma.
+            &nbsp;
+            <span className="font-bold">aion®</span>.
           </p>
           <div className="flex justify-center">
             <a
               href="#"
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50"
             >
-              Solicita una Demo
+              Solicita una Cotizacion
               <ArrowRight className="ml-2" size={20} />
             </a>
           </div>
