@@ -7,7 +7,7 @@ export default function page() {
     <div className="bg-gray-100 min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-slate-950 from-70%  to-purple-800 text-white py-20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 max-w-screen-lg">
           <h1 className="text-4xl font-bold mb-4">Nuestra Historia</h1>
           <p className="text-xl">
             Más de dos décadas de excelencia en servicios de maquila
@@ -17,7 +17,7 @@ export default function page() {
 
       {/* Company Overview */}
       <section className="py-20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 max-w-screen-lg">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-10 md:mb-0">
               <Image
@@ -49,7 +49,7 @@ export default function page() {
 
       {/* Mission and Vision */}
       <section className="bg-gray-200 py-20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 max-w-screen-lg">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="bg-white p-8 rounded-lg shadow-md">
               <h3 className="text-2xl font-bold mb-4 text-purple-600">
@@ -79,7 +79,7 @@ export default function page() {
 
       {/* Company Stats */}
       <section className="py-20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 max-w-screen-lg">
           <h2 className="text-3xl font-bold text-center mb-12">
             Nuestro Impacto en Números
           </h2>
@@ -120,7 +120,7 @@ export default function page() {
 
       {/* Our Values */}
       <section className="bg-secondary text-white py-20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 max-w-screen-lg">
           <h2 className="text-3xl font-bold text-center mb-12">
             Nuestros Valores
           </h2>
@@ -178,7 +178,7 @@ export default function page() {
 
       {/* Team Section */}
       <section className="py-20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 max-w-screen-lg">
           <h2 className="text-3xl font-bold text-center mb-12">
             Nuestro Equipo Directivo
           </h2>
