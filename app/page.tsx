@@ -8,6 +8,7 @@ import {
   Shield,
   CheckCircle,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function Page() {
   const [text, setText] = useState("");
@@ -113,18 +114,44 @@ export default function Page() {
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
               },
             ].map((feature, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6">
-                <div className="flex items-center justify-center w-12 h-12 rounded-md bg-blue-100 mb-4">
-                  {feature.icon}
+              <div className="flip-card">
+                {/* Card Inner - both front and back are within this wrapper */}
+                <div className="flip-card-inner">
+                  {/* Front Side of the Card */}
+                  <div className="flip-card-front text-white flex items-center justify-center rounded-lg shadow-lg">
+                    <div>
+                      <Image
+                        src="/Münster.jpg"
+                        alt="Card Image"
+                        width={600}
+                        height={800}
+                        className="rounded-lg shadow-lg"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Back Side of the Card */}
+                  <div className="flip-card-back text-white flex items-center justify-center rounded-lg shadow-lg">
+                    <div className="p-6">
+                      <div className="flex items-center justify-center w-12 rounded-md bg-blue-100 mb-4">
+                        {feature.icon}
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-600">{feature.description}</p>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section>
+        <div className="flex justify-center items-center bg-gray-200"></div>
       </section>
 
       {/* Testimonials Section */}

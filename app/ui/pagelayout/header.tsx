@@ -11,7 +11,7 @@ const navItems = [
   { name: "Nosotros", href: "/about" },
   { name: "Tecnología", href: "/technology" },
   { name: "Contácto", href: "/contact" },
-  { name: "Noticias", href: "/news" },
+  // { name: "Noticias", href: "/news" },
   { name: "FAQ'S", href: "/faq" },
 ];
 
