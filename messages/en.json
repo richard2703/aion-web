@@ -1,0 +1,56 @@
+{
+  "LocaleSwitcher": {
+    "es": "es",
+    "de": "de",
+    "en": "en",
+    "label": "Language"
+  },
+  "Header": {
+    "home": "Home",
+    "products": "Development",
+    "about": "About Us",
+    "technology": "Technology",
+    "contact": "Contact",
+    "news": "News",
+    "faq": "FAQ'S"
+  },
+  "Footer": {
+    "our_company": "Our Company",
+    "about_us": "We are a company dedicated to providing innovative solutions for your business. Our commitment is to help you achieve your goals.",
+    "quick_links": "Site Map",
+    "home": "Home",
+    "products": "Development",
+    "about_page": "About Us",
+    "technology": "Technology",
+    "contact": "Contact",
+    "news": "News",
+    "faq": "FAQ'S",
+    "copyright": "© aion. All rights reserved.",
+    "policy": "Privacy Policy",
+    "terms": "Terms and Conditions",
+    "contact_info": "Contact",
+    "email": "maquilas@aionsuplementos.com",
+    "phone": "+52 33 1293 8626",
+    "address": "Av. Patria 288, Jardines de la Patria, Zapopan, Jalisco. CP. 45110.",
+    "follow_us": "Follow Us"
+  },
+  "HomePage": {
+    "aion": "aion®",
+    "title": "Your brand, our products",
+    "purpose": "We develop partnerships in nutritional supplements for the physical and mental well-being of the whole family, through products that are responsible with our community and environment.",
+    "why_us": "Why choose us?",
+    "point_one": "Guaranteed quality at all times",
+    "point_two": "Efficient and agile process",
+    "point_three": "Your vision, our mission",
+    "point_four": "Innovation in every product",
+    "features": "Main features",
+    "feature_one": "Our Experience and Reputation: 5 decades in the market, pioneers in nutritional supplements.",
+    "feature_two": "Innovation Capacity: Development of new products and innovative formulas.",
+    "feature_three": "Production Flexibility: Ability to adapt formulas and volumes according to client needs.",
+    "testimonials": "What our clients say",
+    "get_started": "Get started now",
+    "ready_to_start": "Ready to start?",
+    "join_us": "Join thousands of companies already transforming their business with",
+    "get_quote": "Request a quote"
+  }
+}
