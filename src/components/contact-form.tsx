@@ -1,4 +1,5 @@
 // TODO: Make this functional and reusable
+import { useTranslations } from "next-intl";
 import { useState, ChangeEvent, FormEvent } from "react";
 interface FormData {
   name: string;
@@ -9,6 +10,7 @@ interface FormData {
 }
 
 const ContactForm: React.FC = () => {
+  const t = useTranslations("ContactForm");
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -40,7 +42,7 @@ const ContactForm: React.FC = () => {
       <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
         <div>
           <label htmlFor="name" className="block ">
-            Tu nombre
+            {t("name")}
           </label>
           <input
             type="text"
@@ -55,7 +57,7 @@ const ContactForm: React.FC = () => {
 
         <div>
           <label htmlFor="email" className="block ">
-            Tu correo electrónico
+            {t("email")}
           </label>
           <input
             type="email"
@@ -70,7 +72,7 @@ const ContactForm: React.FC = () => {
 
         <div>
           <label htmlFor="phone" className="block ">
-            Teléfono
+            {t("phone")}
           </label>
           <div className="flex items-center">
             <input
@@ -87,22 +89,22 @@ const ContactForm: React.FC = () => {
 
         <div>
           <label htmlFor="phone" className="block ">
-            Aque te dedicas
+            {t("profession")}
           </label>
           <select
             name="phone"
             className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
           >
-            <option value="">Seleccione una opci&oacute;n</option>
-            <option value="asesor">Asesor</option>
-            <option value="negocio">Dueño de negocio</option>
-            <option value="other">Otro</option>
+            <option value="">{t("pick_option")}</option>
+            <option value="asesor">{t("consultant")}</option>
+            <option value="negocio">{t("Owner")}</option>
+            <option value="other">{t("other")}</option>
           </select>
         </div>
 
         <div>
           <label htmlFor="comments" className="block ">
-            ¿Quieres comentarnos algo?
+            {t("comment")}
           </label>
           <textarea
             id="comments"
@@ -125,9 +127,9 @@ const ContactForm: React.FC = () => {
               className="w-4 h-4 text-purple-600 border-gray-300 rounded focus:ring-purple-500"
             />
             <span>
-              He leído y acepto el{" "}
+              {t("agree")}{" "}
               <a href="#" className="text-purple-600 underline">
-                Aviso de privacidad
+                {t("privacy")}
               </a>
             </span>
           </label>
@@ -137,7 +139,7 @@ const ContactForm: React.FC = () => {
           type="submit"
           className="w-full py-2 px-4 bg-purple-600 text-white rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 transition ease-in-out duration-300"
         >
-          ENVIAR SOLICITUD
+          {t("send")}
         </button>
       </form>
     </section>

@@ -1,17 +1,18 @@
 import React from "react";
 import Image from "next/image";
-import { Clock, Users, Globe, Award } from "lucide-react";
+import { Clock, Users, Globe, Award, PillBottle } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { coreTeam } from "@/src/constants/core-team";
 
 export default function page() {
+  const t = useTranslations("AboutPage");
   return (
     <div className="bg-gray-100 min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-slate-950 from-70%  to-purple-800 text-white py-20">
         <div className="container mx-auto px-6 max-w-screen-lg">
-          <h1 className="text-4xl font-bold mb-4">Nuestra Historia</h1>
-          <p className="text-xl">
-            Más de dos décadas de excelencia en servicios de maquila
-          </p>
+          <h1 className="text-4xl font-bold mb-4">{t("title")}</h1>
+          <p className="text-xl">{t("description")}</p>
         </div>
       </section>
 
@@ -29,19 +30,8 @@ export default function page() {
               />
             </div>
             <div className="md:w-1/2 md:pl-10">
-              <h2 className="text-3xl font-bold mb-6">Quiénes Somos</h2>
-              <p className="text-gray-700 mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas lacinia dui neque, eu blandit augue fermentum eget.
-                Suspendisse lacus ipsum, condimentum ut hendrerit et, tincidunt
-                id augue.
-              </p>
-              <p className="text-gray-700 mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas lacinia dui neque, eu blandit augue fermentum eget.
-                Suspendisse lacus ipsum, condimentum ut hendrerit et, tincidunt
-                id augue.
-              </p>
+              <h2 className="text-3xl font-bold mb-6">{t("our_history")}</h2>
+              <p className="text-gray-700 mb-4">{t("history")}</p>
             </div>
           </div>
         </div>
@@ -53,25 +43,15 @@ export default function page() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="bg-white p-8 rounded-lg shadow-md">
               <h3 className="text-2xl font-bold mb-4 text-purple-600">
-                Nuestra Misión
+                {t("our_mission")}
               </h3>
-              <p className="text-gray-700">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas lacinia dui neque, eu blandit augue fermentum eget.
-                Suspendisse lacus ipsum, condimentum ut hendrerit et, tincidunt
-                id augue.
-              </p>
+              <p className="text-gray-700">{t("mission")}</p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md">
               <h3 className="text-2xl font-bold mb-4 text-purple-600">
-                Nuestra Visión
+                {t("our_vision")}
               </h3>
-              <p className="text-gray-700">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas lacinia dui neque, eu blandit augue fermentum eget.
-                Suspendisse lacus ipsum, condimentum ut hendrerit et, tincidunt
-                id augue.
-              </p>
+              <p className="text-gray-700">{t("vision")}</p>
             </div>
           </div>
         </div>
@@ -81,29 +61,29 @@ export default function page() {
       <section className="py-20">
         <div className="container mx-auto px-6 max-w-screen-lg">
           <h2 className="text-3xl font-bold text-center mb-12">
-            Nuestro Impacto en Números
+            {t("our_impact")}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               {
                 icon: <Clock size={40} />,
-                stat: "20+",
-                description: "Años de Experiencia",
+                stat: "50+",
+                description: t("experience"),
               },
               {
-                icon: <Users size={40} />,
-                stat: "500+",
-                description: "Empleados",
+                icon: <PillBottle size={40} />,
+                stat: "400+",
+                description: t("products"),
               },
               {
                 icon: <Globe size={40} />,
-                stat: "30+",
-                description: "Países Atendidos",
+                stat: "50+",
+                description: t("partnerships"),
               },
               {
-                icon: <Award size={40} />,
-                stat: "50+",
-                description: "Premios de la Industria",
+                icon: <Users size={40} />,
+                stat: "150+",
+                description: t("collaborators"),
               },
             ].map((item, index) => (
               <div key={index} className="text-center">
@@ -122,49 +102,45 @@ export default function page() {
       <section className="bg-secondary text-white py-20">
         <div className="container mx-auto px-6 max-w-screen-lg">
           <h2 className="text-3xl font-bold text-center mb-12">
-            Nuestros Valores
+            {t("values")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "Integridad",
-                description:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                title: t("integrity"),
+                description: t("integrity_description"),
               },
               {
-                title: "Responsabilidad",
-                description:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                title: t("responsibility"),
+                description: t("reponsibility_description"),
               },
               {
-                title: "Respeto",
-                description:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                title: t("respect"),
+                description: t("respect_description"),
               },
               {
-                title: "Sentido de urgencia",
-                description:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                title: t("sense_of_urgency"),
+                description: t("sense_of_urgency_description"),
               },
               {
-                title: "Excelencia",
-                description:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                title: t("excellence"),
+                description: t("excellence_description"),
               },
               {
-                title: "comunicación",
-                description:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                title: t("common_good"),
+                description: t("common_good_description"),
               },
               {
-                title: "Trabajo",
-                description:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                title: t("communication"),
+                description: t("communication_description"),
               },
               {
-                title: "Orientación al cliente",
-                description:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                title: t("teamwork"),
+                description: t("teamwork_description"),
+              },
+              {
+                title: t("client_driven"),
+                description: t("client_driven_description"),
               },
             ].map((value, index) => (
               <div key={index} className="bg-blue-900 p-6 rounded-lg">
@@ -180,26 +156,10 @@ export default function page() {
       <section className="py-20">
         <div className="container mx-auto px-6 max-w-screen-lg">
           <h2 className="text-3xl font-bold text-center mb-12">
-            Nuestro Equipo Directivo
+            {t("core_team")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "María Rodríguez",
-                position: "CEO",
-                image: "/customers/evil-rabbit.png",
-              },
-              {
-                name: "Carlos Gómez",
-                position: "Director de Operaciones",
-                image: "/customers/balazs-orban.png",
-              },
-              {
-                name: "Ana Martínez",
-                position: "Directora de Innovación",
-                image: "/customers/delba-de-oliveira.png",
-              },
-            ].map((member, index) => (
+            {coreTeam.map((member, index) => (
               <div key={index} className="text-center">
                 <Image
                   src={member.image}

@@ -1,30 +1,28 @@
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function page() {
+  const t = useTranslations("ProductPage");
   const developmentSteps = [
     {
-      title: "Investigación de Ingredientes",
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore rem voluptatum velit, incidunt omnis vel! Tempore, consectetur.",
+      title: t("survey"),
+      description: t("survey_description"),
       image: "/Münster.jpg",
     },
     {
-      title: "Formulación Precisa",
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore rem voluptatum velit, incidunt omnis vel! Tempore, consectetur.",
+      title: t("formulation"),
+      description: t("formulation_description"),
       image: "/Münster.jpg",
     },
     {
-      title: "Pruebas de Calidad",
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore rem voluptatum velit, incidunt omnis vel! Tempore, consectetur.",
+      title: t("planning"),
+      description: t("planning_description"),
       image: "/Münster.jpg",
     },
     {
-      title: "Producción y Empaque",
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore rem voluptatum velit, incidunt omnis vel! Tempore, consectetur.",
+      title: t("delivery"),
+      description: t("delivery_description"),
       image: "/Münster.jpg",
     },
   ];
@@ -34,13 +32,8 @@ export default function page() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-slate-950 from-70%  to-green-800 text-white py-20">
         <div className="container mx-auto px-6 max-w-screen-lg">
-          <h1 className="text-4xl font-bold mb-4">
-            Desarrollo de Suplementación
-          </h1>
-          <p className="text-xl">
-            Un enfoque científico y riguroso para desarrollar suplementos de
-            alta calidad.
-          </p>
+          <h1 className="text-4xl font-bold mb-4">{t("title")}</h1>
+          <p className="text-xl">{t("description")}</p>
         </div>
       </section>
 
@@ -48,7 +41,7 @@ export default function page() {
       <section className="py-20">
         <div className="container mx-auto px-6 max-w-screen-lg">
           <h2 className="text-3xl font-bold text-center mb-12">
-            Nuestro Proceso de Desarrollo
+            {t("subtitle")}
           </h2>
           <div className="space-y-12">
             {developmentSteps.map((step, index) => (
@@ -81,28 +74,20 @@ export default function page() {
       <section className="bg-gray-200 py-20">
         <div className="container mx-auto px-6 max-w-screen-lg">
           <h2 className="text-3xl font-bold text-center mb-12">
-            Tecnología y Equipo Dedicado
+            {t("technology_and_equipment")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="bg-white p-8 rounded-lg shadow-md">
               <h3 className="text-2xl font-bold mb-4 text-green-600">
-                Laboratorios de Calidad
+                {t("creative_lab")}
               </h3>
-              <p className="text-slate-700">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Inventore rem voluptatum velit, incidunt omnis vel! Tempore,
-                consectetur.
-              </p>
+              <p className="text-slate-700">{t("creative_lab_description")}</p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md">
               <h3 className="text-2xl font-bold mb-4 text-green-600">
-                Equipo Experto
+                {t("team")}
               </h3>
-              <p className="text-slate-700">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Inventore rem voluptatum velit, incidunt omnis vel! Tempore,
-                consectetur.
-              </p>
+              <p className="text-slate-700">{t("team_description")}</p>
             </div>
           </div>
         </div>
@@ -111,18 +96,13 @@ export default function page() {
       {/* Call to Action */}
       <section className="bg-blue-600 text-white py-20">
         <div className="container mx-auto px-6 max-w-screen-lg text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            ¿Interesado en Nuestros Suplementos?
-          </h2>
-          <p className="text-xl mb-8">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
-            rem voluptatum velit, incidunt omnis vel! Tempore, consectetur.
-          </p>
+          <h2 className="text-3xl font-bold mb-6">{t("discover")}</h2>
+          <p className="text-xl mb-8">{t("discover_description")}</p>
           <a
             href="#"
             className="bg-white text-green-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-200 transition"
           >
-            Ver Productos
+            {t("discover_button")}
           </a>
         </div>
       </section>

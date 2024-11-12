@@ -15,6 +15,16 @@ const Footer = () => {
   const t = useTranslations("Footer");
   const currentYear = new Date().getFullYear();
 
+  const navItems = [
+    { name: t("home"), href: "/" },
+    { name: t("products"), href: "/products" },
+    { name: t("about"), href: "/about" },
+    { name: t("technology"), href: "/technology" },
+    { name: t("contact"), href: "/contact" },
+    // { name: t("news"), href: "/news" },
+    { name: t("faq"), href: "/faq" },
+  ];
+
   return (
     <footer className="bg-gray-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -29,21 +39,13 @@ const Footer = () => {
           <div>
             <h2 className="text-2xl font-bold mb-4">{t("quick_links")}</h2>
             <ul className="space-y-2">
-              {[
-                t("home"),
-                t("products"),
-                t("about"),
-                t("technology"),
-                t("contact"),
-                t("news"),
-                t("faq"),
-              ].map((item) => (
-                <li key={item}>
+              {navItems.map((item) => (
+                <li key={item.href}>
                   <Link
-                    href={`/${item.toLowerCase().replace(" ", "-")}`}
+                    href={item.href}
                     className="text-gray-300 hover:text-white transition duration-300"
                   >
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}
