@@ -1,7 +1,7 @@
-import { GlobeAltIcon } from '@heroicons/react/24/outline';
+import { GlobeAltIcon } from "@heroicons/react/24/outline";
 // import { lusitana } from '@/app/ui/fonts';
 
-import { montserrat } from "../ui/font";
+import { montserrat } from "./font";
 
 export default function AcmeLogo() {
   return (

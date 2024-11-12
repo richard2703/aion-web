@@ -1,10 +1,10 @@
-import Image from 'next/image';
-import { montserrat } from "../../ui/font";
-import Search from '@/app/ui/search';
+import Image from "next/image";
+import { montserrat } from "../font";
+import Search from "@/src/components/ui/search";
 import {
   CustomersTableType,
   FormattedCustomersTable,
-} from '@/app/lib/definitions';
+} from "@/src/app/lib/definitions";
 
 export default async function CustomersTable({
   customers,

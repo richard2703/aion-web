@@ -1,0 +1,62 @@
+{
+  "LocaleSwitcher": {
+    "es": "es",
+    "de": "de",
+    "en": "en",
+    "label": "Idioma"
+  },
+  "Header": {
+    "home": "Inicio",
+    "products": "Desarrollo",
+    "about": "Nosotros",
+    "technology": "Tecnología",
+    "contact": "Contacto",
+    "news": "Noticias",
+    "faq": "FAQ'S"
+  },
+  "Footer": {
+    "our_company": "Nuestra Empresa",
+    "about_us": "Somos una empresa dedicada a proporcionar soluciones innovadoras para tu negocio. Nuestro compromiso es ayudarte a alcanzar tus metas.",
+    "quick_links": "Mapa del Sitio",
+    "home": "Inicio",
+    "products": "Desarrollo",
+    "about_page": "Nosotros",
+    "technology": "Tecnología",
+    "contact": "Contacto",
+    "news": "Noticias",
+    "faq": "FAQ'S",
+    "copyright": "© 2024 aion. Todos los derechos reservados.",
+    "policy": "Política de Privacidad",
+    "terms": "Términos y Condiciones",
+    "contact_info": "Contacto",
+    "email": "maquilas@aionsuplementos.com",
+    "phone": "+52 33 1293 8626",
+    "address": "Av. Patria 288, Jardines de la Patria, Zapopan, Jalisco. CP. 45110.",
+    "follow_us": "Siguenos"
+  },
+  "HomePage": {
+    "aion": "aion®",
+    "title": "Su marca, nuestros productos",
+    "purpose": "Desarrollamos socios de suplementos alimenticios para el bienestar físico y mental de toda la familia, a través de productos responsables con nuestra comunidad y nuestro medio ambiente.",
+    "why_us": "¿Por qué elegirnos?",
+    "point_one": "Calidad garantizada en todo momento",
+    "point_two": "Proceso ágil y eficiente",
+    "point_three": "Su visión, nuestra misión",
+    "point_four": "Innovación en cada producto",
+    "features": "Características principales",
+    "feature_one": "Nuestra Experiencia y Reputación: 5 décadas en el mercado, pioneros en suplementos alimenticios.",
+    "feature_two": "Capacidad de Innovación: Desarrollo de nuevos productos y fórmulas innovadoras.",
+    "feature_three": "Flexibilidad en Producción: Capacidad para adaptar fórmulas y volúmenes según las necesidades del cliente.",
+    "testimonials": "Lo que opinan nuestros clientes",
+    "get_started": "Comience ahora",
+    "ready_to_start": "¿Listo para empezar?",
+    "join_us": "Únase a miles de empresas que ya están transformando su negocio con",
+    "get_quote": "Solicite una cotización"
+  },
+  "ProductPage": {},
+  "AboutPage": {},
+  "TechPage": {},
+  "ContactPage": {},
+  "BlogPage": {},
+  "FaqPage": {}
+}

@@ -9,8 +9,10 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+  const t = useTranslations("Footer");
   const currentYear = new Date().getFullYear();
 
   return (
@@ -19,25 +21,22 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Columna 1: Sobre Nosotros */}
           <div>
-            <h2 className="text-2xl font-bold mb-4">Nuestra Empresa</h2>
-            <p className="text-gray-300">
-              Somos una empresa dedicada a proporcionar soluciones innovadoras
-              para tu negocio. Nuestro compromiso es ayudarte a alcanzar tus
-              metas.
-            </p>
+            <h2 className="text-2xl font-bold mb-4">{t("our_company")}</h2>
+            <p className="text-gray-300">{t("about_us")}</p>
           </div>
 
           {/* Columna 2: Enlaces Rápidos */}
           <div>
-            <h2 className="text-2xl font-bold mb-4">Mapa del Sitio</h2>
+            <h2 className="text-2xl font-bold mb-4">{t("quick_links")}</h2>
             <ul className="space-y-2">
               {[
-                "Inicio",
-                "Desarrollo",
-                "Tecnologias",
-                "Contacto",
-                "Noticias",
-                "FAQ'S",
+                t("home"),
+                t("products"),
+                t("about"),
+                t("technology"),
+                t("contact"),
+                t("news"),
+                t("faq"),
               ].map((item) => (
                 <li key={item}>
                   <Link
@@ -53,7 +52,7 @@ const Footer = () => {
 
           {/* Columna 3: Contacto */}
           <div>
-            <h2 className="text-2xl font-bold mb-4">Contacto</h2>
+            <h2 className="text-2xl font-bold mb-4">{t("contact_info")}</h2>
             <ul className="space-y-2">
               <li className="flex items-center">
                 <Mail size={20} className="mr-2" />
@@ -61,7 +60,7 @@ const Footer = () => {
                   href="mailto:info@tuempresa.com"
                   className="text-gray-300 hover:text-white transition duration-300"
                 >
-                  info@aion.com
+                  {t("email")}
                 </a>
               </li>
               <li className="flex items-center">
@@ -70,21 +69,19 @@ const Footer = () => {
                   href="tel:+520000000000"
                   className="text-gray-300 hover:text-white transition duration-300"
                 >
-                  +52 (000) 000-0000
+                  {t("phone")}
                 </a>
               </li>
               <li className="flex items-center">
                 <MapPin size={20} className="mr-2" />
-                <span className="text-gray-300">
-                  Calle de la tilma, 294, Chapalita Sur, 45040 Zapopan, Jal.
-                </span>
+                <span className="text-gray-300">{t("address")}</span>
               </li>
             </ul>
           </div>
 
           {/* Columna 4: Redes Sociales */}
           <div>
-            <h2 className="text-2xl font-bold mb-4">Síguenos</h2>
+            <h2 className="text-2xl font-bold mb-4">{t("follow_us")}</h2>
             <div className="flex space-x-4">
               {[
                 { icon: Facebook, href: "https://facebook.com" },
@@ -112,20 +109,20 @@ const Footer = () => {
         {/* Copyright y Política de Privacidad */}
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-300 text-sm">
-            © {currentYear} aion. Todos los derechos reservados.
+            {t("copyright")} {currentYear}
           </p>
           <div className="mt-4 md:mt-0">
             <Link
               href="/politica-de-privacidad"
               className="text-gray-300 hover:text-white text-sm mr-4 transition duration-300"
             >
-              Política de Privacidad
+              {t("policy")}
             </Link>
             <Link
               href="/terminos-y-condiciones"
               className="text-gray-300 hover:text-white text-sm transition duration-300"
             >
-              Términos y Condiciones
+              {t("terms")}
             </Link>
           </div>
         </div>

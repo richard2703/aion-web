@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import ContactForm from "../ui/contact-form";
+import ContactForm from "../../components/contact-form";
 
 export default function page() {
   return (
