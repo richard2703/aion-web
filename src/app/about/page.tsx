@@ -18,40 +18,41 @@ export default function page() {
 
       {/* Company Overview */}
       <section className="py-20">
-        <div className="container mx-auto px-6 max-w-screen-lg">
+        <div className="container mx-auto px-6 max-w-screen-lg text-justify">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-10 md:mb-0">
               <Image
-                src="/Münster.jpg"
+                src="/about/our_team.jpeg"
                 alt="Vista general de la fábrica"
                 width={600}
-                height={400}
+                height={600}
                 className="rounded-lg shadow-lg"
               />
             </div>
             <div className="md:w-1/2 md:pl-10">
               <h2 className="text-3xl font-bold mb-6">{t("our_history")}</h2>
-              <p className="text-gray-700 mb-4">{t("history")}</p>
+              <p className="font-bold text-slate-700 mb-4">
+                {t("paragraph_1")}
+              </p>
             </div>
           </div>
+          <br />
+          <p className="font-bold text-slate-700 mb-4">{t("paragraph_2")}</p>
+          <p className="font-bold text-slate-700 mb-4">{t("paragraph_3")}</p>
         </div>
       </section>
 
-      {/* Mission and Vision */}
+      {/* Purpose */}
       <section className="bg-gray-200 py-20">
-        <div className="container mx-auto px-6 max-w-screen-lg">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="container mx-auto max-w-screen-lg">
+          <div className=" gap-10">
             <div className="bg-white p-8 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-purple-600">
-                {t("our_mission")}
+              <h3 className="text-center text-2xl font-bold mb-4 text-purple-600">
+                {t("our_purpose")}
               </h3>
-              <p className="text-gray-700">{t("mission")}</p>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-purple-600">
-                {t("our_vision")}
-              </h3>
-              <p className="text-gray-700">{t("vision")}</p>
+              <p className="font-bold text-2xl text-slate-700 text-center">
+                {t("purpose")}
+              </p>
             </div>
           </div>
         </div>
@@ -67,7 +68,7 @@ export default function page() {
             {[
               {
                 icon: <Clock size={40} />,
-                stat: "50+",
+                stat: "30",
                 description: t("experience"),
               },
               {
@@ -98,11 +99,11 @@ export default function page() {
         </div>
       </section>
 
-      {/* Our Values */}
+      {/* Principles for action */}
       <section className="bg-secondary text-white py-20">
         <div className="container mx-auto px-6 max-w-screen-lg">
           <h2 className="text-3xl font-bold text-center mb-12">
-            {t("values")}
+            {t("principles")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -112,7 +113,7 @@ export default function page() {
               },
               {
                 title: t("responsibility"),
-                description: t("reponsibility_description"),
+                description: t("responsibility_description"),
               },
               {
                 title: t("respect"),
@@ -154,10 +155,11 @@ export default function page() {
 
       {/* Team Section */}
       <section className="py-20">
-        <div className="container mx-auto px-6 max-w-screen-lg">
+        <div className="container mx-auto px-6 max-w-screen-lg text-justify">
           <h2 className="text-3xl font-bold text-center mb-12">
             {t("core_team")}
           </h2>
+          {/* 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {coreTeam.map((member, index) => (
               <div key={index} className="text-center">
@@ -169,10 +171,24 @@ export default function page() {
                   className="rounded-full mx-auto mb-4"
                 />
                 <h3 className="text-xl font-bold mb-2">{member.name}</h3>
-                <p className="text-gray-600">{member.position}</p>
+                <p className="font-bold text-gray-600">{member.position}</p>
               </div>
             ))}
-          </div>
+          </div> */}
+          <Image
+            src="/about/our_team.jpeg"
+            alt="Vista general de la fábrica"
+            width={1200}
+            height={400}
+            className="rounded-lg shadow-lg"
+          />
+          <br />
+          <p className="font-bold text-slate-700 mb-4">
+            {t("team_paragraph_1")}
+          </p>
+          <p className="font-bold text-slate-700 mb-4">
+            {t("team_paragraph_2")}
+          </p>
         </div>
       </section>
     </div>

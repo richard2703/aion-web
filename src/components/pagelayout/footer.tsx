@@ -86,10 +86,18 @@ const Footer = () => {
             <h2 className="text-2xl font-bold mb-4">{t("follow_us")}</h2>
             <div className="flex space-x-4">
               {[
-                { icon: Facebook, href: "https://facebook.com" },
-                { icon: Twitter, href: "https://x.com/" },
-                { icon: Instagram, href: "https://instagram.com" },
-                { icon: Linkedin, href: "https://linkedin.com" },
+                {
+                  icon: Facebook,
+                  href: "https://www.facebook.com/share/18eGUAMMTC/",
+                },
+                {
+                  icon: Instagram,
+                  href: "https://www.instagram.com/aionsuplementos/?igsh=bDg4aHhuanhtZDJ3",
+                },
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/company/aion-suplementos-alimenticios/about/?viewAsMember=true",
+                },
               ].map((social, index) => (
                 <a
                   key={index}
