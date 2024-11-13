@@ -62,7 +62,7 @@ export default function page() {
                   <h3 className="text-2xl font-bold mb-4 text-green-600">
                     {step.title}
                   </h3>
-                  <p className="text-slate-700">{step.description}</p>
+                  <p className="font-bold text-slate-800">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -81,13 +81,17 @@ export default function page() {
               <h3 className="text-2xl font-bold mb-4 text-green-600">
                 {t("creative_lab")}
               </h3>
-              <p className="text-slate-700">{t("creative_lab_description")}</p>
+              <p className="font-bold text-slate-800">
+                {t("creative_lab_description")}
+              </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md">
               <h3 className="text-2xl font-bold mb-4 text-green-600">
                 {t("team")}
               </h3>
-              <p className="text-slate-700">{t("team_description")}</p>
+              <p className="font-bold text-slate-800">
+                {t("team_description")}
+              </p>
             </div>
           </div>
         </div>

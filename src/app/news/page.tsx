@@ -61,7 +61,9 @@ export default function page() {
               <h2 className="text-3xl font-bold mb-6 text-purple-600">
                 {featuredArticle.title}
               </h2>
-              <p className="text-gray-700 mb-4">{featuredArticle.summary}</p>
+              <p className="font-bold text-slate-700 mb-4">
+                {featuredArticle.summary}
+              </p>
               <a
                 href="#"
                 className="text-purple-600 font-semibold hover:underline"
@@ -94,7 +96,9 @@ export default function page() {
                   <h3 className="text-xl font-bold mb-2 text-purple-600">
                     {article.title}
                   </h3>
-                  <p className="text-gray-700 mb-4">{article.summary}</p>
+                  <p className="font-bold text-slate-700 mb-4">
+                    {article.summary}
+                  </p>
                   <a
                     href="#"
                     className="text-purple-600 font-semibold hover:underline"

@@ -22,16 +22,16 @@ export default function page() {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-10 md:mb-0">
               <Image
-                src="/Münster.jpg"
+                src="/us.jpeg"
                 alt="Vista general de la fábrica"
                 width={600}
-                height={400}
+                height={600}
                 className="rounded-lg shadow-lg"
               />
             </div>
             <div className="md:w-1/2 md:pl-10">
               <h2 className="text-3xl font-bold mb-6">{t("our_history")}</h2>
-              <p className="text-gray-700 mb-4">{t("history")}</p>
+              <p className="font-bold text-slate-700 mb-4">{t("history")}</p>
             </div>
           </div>
         </div>
@@ -45,13 +45,13 @@ export default function page() {
               <h3 className="text-2xl font-bold mb-4 text-purple-600">
                 {t("our_mission")}
               </h3>
-              <p className="text-gray-700">{t("mission")}</p>
+              <p className="font-bold text-slate-700">{t("mission")}</p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md">
               <h3 className="text-2xl font-bold mb-4 text-purple-600">
                 {t("our_vision")}
               </h3>
-              <p className="text-gray-700">{t("vision")}</p>
+              <p className="font-bold text-slate-700">{t("vision")}</p>
             </div>
           </div>
         </div>
@@ -169,7 +169,7 @@ export default function page() {
                   className="rounded-full mx-auto mb-4"
                 />
                 <h3 className="text-xl font-bold mb-2">{member.name}</h3>
-                <p className="text-gray-600">{member.position}</p>
+                <p className="font-bold text-gray-600">{member.position}</p>
               </div>
             ))}
           </div>

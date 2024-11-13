@@ -55,12 +55,39 @@ export default function page() {
                 description: t("ointments_description"),
               },
             ].map((tech, index) => (
-              <div key={index} className="text-center">
-                <div className="text-blue-600 mb-4 flex justify-center">
-                  {tech.icon}
+              // <div key={index} className="text-center">
+              //   <div className="text-blue-600 mb-4 flex justify-center">
+              //     {tech.icon}
+              //   </div>
+              //   <h3 className="text-2xl font-bold mb-2">{tech.title}</h3>
+              //   <p className="text-gray-600">{tech.description}</p>
+              // </div>
+              <div key={tech.title} className="flip-card">
+                {/* Card Inner - both front and back are within this wrapper */}
+                <div className="flip-card-inner">
+                  {/* Front Side of the Card */}
+                  <div className="flip-card-front text-white flex items-center justify-center rounded-lg shadow-lg">
+                    <div>
+                      <Image
+                        src="/capsulas.png"
+                        alt="Card Image"
+                        width={600}
+                        height={800}
+                        className="rounded-lg shadow-lg"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Back Side of the Card */}
+                  <div className="flip-card-back text-white flex items-center justify-center rounded-lg shadow-lg">
+                    <div className="p-6">
+                      <div className="flex items-center justify-center w-12 rounded-md bg-blue-100 mb-4">
+                        {tech.title}
+                      </div>
+                      <p className="text-gray-600">{tech.description}</p>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-2">{tech.title}</h3>
-                <p className="text-gray-600">{tech.description}</p>
               </div>
             ))}
           </div>
@@ -104,7 +131,7 @@ export default function page() {
                 <h3 className="text-xl font-bold mb-2 text-blue-600">
                   {tool.name}
                 </h3>
-                <p className="text-gray-700">{tool.description}</p>
+                <p className="font-bold text-slate-700">{tool.description}</p>
               </div>
             ))}
           </div>
