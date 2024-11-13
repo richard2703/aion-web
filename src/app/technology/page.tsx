@@ -17,73 +17,71 @@ export default function page() {
 
       {/* Core Technologies */}
       <section className="py-20">
-        <div className="container mx-auto px-6 max-w-screen-lg">
+        <div className="container mx-auto max-w-screen-lg">
           <h2 className="text-3xl font-bold text-center mb-12">
             {t("key_technologies")}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* TODO: Add the custom icons from identity manifest */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
               {
                 icon: <Cpu size={40} />,
                 title: t("capsules"),
                 description: t("capsules_description"),
+                image: "/technologies/capsulas.png",
               },
               {
                 icon: <Cpu size={40} />,
                 title: t("tablets"),
                 description: t("tablets_description"),
+                image: "/technologies/capletas.png",
               },
               {
                 icon: <Cpu size={40} />,
                 title: t("powders"),
                 description: t("powders_description"),
+                image: "/technologies/polvos.png",
               },
               {
                 icon: <Cpu size={40} />,
                 title: t("liquids"),
                 description: t("liquids_description"),
+                image: "/technologies/liquidos.png",
               },
               {
                 icon: <Cpu size={40} />,
                 title: t("gels"),
                 description: t("gels_description"),
+                image: "/technologies/geles.png",
               },
               {
                 icon: <Cpu size={40} />,
                 title: t("ointments"),
                 description: t("ointments_description"),
+                image: "/technologies/cremas.png",
               },
             ].map((tech, index) => (
-              // <div key={index} className="text-center">
-              //   <div className="text-blue-600 mb-4 flex justify-center">
-              //     {tech.icon}
-              //   </div>
-              //   <h3 className="text-2xl font-bold mb-2">{tech.title}</h3>
-              //   <p className="text-gray-600">{tech.description}</p>
-              // </div>
-              <div key={tech.title} className="flip-card">
+              <div
+                key={tech.title}
+                className="flip-card h-[350px] w-full md:w-[256px]"
+              >
                 {/* Card Inner - both front and back are within this wrapper */}
                 <div className="flip-card-inner">
                   {/* Front Side of the Card */}
-                  <div className="flip-card-front text-white flex items-center justify-center rounded-lg shadow-lg">
+                  <div className="flip-card-front flex items-center justify-center rounded-lg shadow-lg h-full">
                     <div>
                       <Image
-                        src="/capsulas.png"
+                        src={tech.image}
                         alt="Card Image"
-                        width={600}
-                        height={800}
+                        width={256}
+                        height={350}
                         className="rounded-lg shadow-lg"
                       />
                     </div>
                   </div>
 
                   {/* Back Side of the Card */}
-                  <div className="flip-card-back text-white flex items-center justify-center rounded-lg shadow-lg">
+                  <div className="flip-card-back text-white flex items-center justify-center rounded-lg shadow-lg h-full">
                     <div className="p-6">
-                      <div className="flex items-center justify-center w-12 rounded-md bg-blue-100 mb-4">
-                        {tech.title}
-                      </div>
                       <p className="text-gray-600">{tech.description}</p>
                     </div>
                   </div>
@@ -148,21 +146,20 @@ export default function page() {
             {[
               {
                 name: t("management_system"),
+                description: t("management_system_description"),
               },
-              {
-                name: t("certifications"),
-              },
+
               {
                 name: t("software"),
+                description: t("software_description"),
               },
               {
                 name: t("operational_capabilities"),
+                description: t("operational_capabilities_description"),
               },
               {
                 name: t("Operational_excellence"),
-              },
-              {
-                name: t("distribution_network"),
+                description: t("Operational_excellence_description"),
               },
             ].map((service, index) => (
               <div
@@ -172,11 +169,35 @@ export default function page() {
                 <h3 className="text-2xl font-bold text-blue-600 mb-4">
                   {service.name}
                 </h3>
+                <p className="font-bold text-slate-700">
+                  {service.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
+      {/* 
+      <div className="relative group h-48 flex   flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+        <a href="#" className="block">
+          <div className="h-28">
+            <div className="absolute -top-20 lg:top-[-10%] left-[5%] z-40  group-hover:top-[-40%] group-hover:opacity-[0.9]   duration-300 w-[90%] h-48 bg-red-500 rounded-xl justify-items-center align-middle">
+              <Image
+                src="/Münster.jpg"
+                alt="Card Image"
+                width={300}
+                height={200}
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+          <div className="p-6   z-10 w-full   ">
+            <p className="mb-2 inline-block text-tg text-center w-full  text-xl  font-sans  font-semibold leading-snug tracking-normal   antialiased">
+              Automotive
+            </p>
+          </div>
+        </a>
+      </div> */}
     </div>
   );
 }
