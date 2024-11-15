@@ -1,8 +1,8 @@
 {
   "LocaleSwitcher": {
-    "es": "es",
-    "de": "de",
-    "en": "en",
+    "es": "Español",
+    "de": "Deutsch",
+    "en": "English",
     "label": "Idioma"
   },
   "Header": {
@@ -182,7 +182,7 @@
   "FaqPage": {
     "title": "Preguntas Frecuentes",
     "description": "¡En aion lo hacemos posible!",
-    "faq": "FAQs",
+    "faq": "¿Tienes dudas? Encuentra aquí las respuestas",
     "Q1": "¿Quiénes son nuestros clientes?",
     "A1": "Mantenemos un acuerdo de confidencialidad con nuestros clientes, por lo cual no revelamos su información, marcas ni productos.",
     "Q2": "¿Por qué comprar con nosotros?",
