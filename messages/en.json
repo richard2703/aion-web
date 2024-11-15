@@ -1,8 +1,8 @@
 {
   "LocaleSwitcher": {
-    "es": "es",
-    "de": "de",
-    "en": "en",
+    "es": "Español",
+    "de": "Deutsch",
+    "en": "English",
     "label": "Language"
   },
   "Header": {
@@ -113,8 +113,9 @@
     "client_driven": "Client Orientation",
     "client_driven_description": "I focus my actions on meeting and exceeding the expectations of internal and external clients.",
     "core_team": "Our Executive Team",
-    "team_paragraph_1": "We have cultivated an agile and empowered organization where every day represents a new opportunity for the growth and development of our staff. We foster a collaborative and dynamic work environment, where ideas are valued and each team member can contribute to collective success.",
-    "team_paragraph_2": "We firmly believe that the talent and experience of our team are key to driving innovation and excellence in our services. Together, we face the challenges of the future with determination and vision, committed to sustainable development and the well-being of our partners and clients."
+    "team_paragraph_1": "Our executive team is composed of professionals with over 100 years of combined experience in various industries, including food, tobacco, graphic arts, beverages, and consulting. This rich diversity of backgrounds allows us to approach market challenges with a broad and creative perspective.",
+    "team_paragraph_2": "We have cultivated an agile and empowered organization, where each day represents a new opportunity for the growth and development of our staff. We foster a collaborative and dynamic work environment where ideas are valued, and each team member can contribute to collective success.",
+    "team_paragraph_3": "We firmly believe that the talent and experience of our team are key to driving innovation and excellence in our services. Together, we face the challenges of the future with determination and vision, committed to sustainable development and the well-being of our partners and clients."
   },
   "TechPage": {
     "title": "Our Technologies",
@@ -181,7 +182,7 @@
   "FaqPage": {
     "title": "Frequently Asked Questions",
     "description": "At aion, we make it possible!",
-    "faq": "FAQs",
+    "faq": "Do you have questions? Find the answers here",
     "Q1": "Who are our clients?",
     "A1": "We maintain a confidentiality agreement with our clients, so we do not disclose their information, brands, or products.",
     "Q2": "Why buy from us?",

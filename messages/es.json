@@ -1,8 +1,8 @@
 {
   "LocaleSwitcher": {
-    "es": "es",
-    "de": "de",
-    "en": "en",
+    "es": "Español",
+    "de": "Deutsch",
+    "en": "English",
     "label": "Idioma"
   },
   "Header": {
@@ -113,8 +113,9 @@
     "client_driven": "Orientación al cliente",
     "client_driven_description": "Centro mis acciones en satisfacer y superar las expectativas de los clientes internos y externos.",
     "core_team": "Nuestro Equipo Directivo",
-    "team_paragraph_1": "Hemos cultivado una organización ágil y empoderada, en la que cada día representa una nueva oportunidad para el crecimiento y desarrollo de nuestro personal. Fomentamos un ambiente de trabajo colaborativo y dinámico, donde las ideas son valoradas y cada miembro del equipo puede contribuir al éxito colectivo.",
-    "team_paragraph_2": "Creemos firmemente que el talento y la experiencia de nuestro equipo son claves para impulsar la innovación y la excelencia en nuestros servicios. Juntos, enfrentamos los retos del futuro con determinación y visión, comprometidos con el desarrollo sostenible y el bienestar de nuestros socios y clientes."
+    "team_paragraph_1": "Nuestro equipo directivo está compuesto por profesionales que suman más de 100 años de experiencia en diversas industrias, incluyendo alimentos, tabaco, artes gráficas, bebidas y consultoría. Esta rica diversidad de antecedentes nos permite abordar los desafíos del mercado con una perspectiva amplia y creativa.",
+    "team_paragraph_2": "Hemos cultivado una organización ágil y empoderada, en la que cada día representa una nueva oportunidad para el crecimiento y desarrollo de nuestro personal. Fomentamos un ambiente de trabajo colaborativo y dinámico, donde las ideas son valoradas y cada miembro del equipo puede contribuir al éxito colectivo.",
+    "team_paragraph_3": "Creemos firmemente que el talento y la experiencia de nuestro equipo son claves para impulsar la innovación y la excelencia en nuestros servicios. Juntos, enfrentamos los retos del futuro con determinación y visión, comprometidos con el desarrollo sostenible y el bienestar de nuestros socios y clientes."
   },
   "TechPage": {
     "title": "Nuestras Tecnologías",
@@ -182,7 +183,7 @@
   "FaqPage": {
     "title": "Preguntas Frecuentes",
     "description": "¡En aion lo hacemos posible!",
-    "faq": "FAQs",
+    "faq": "¿Tienes dudas? Encuentra aquí las respuestas",
     "Q1": "¿Quiénes son nuestros clientes?",
     "A1": "Mantenemos un acuerdo de confidencialidad con nuestros clientes, por lo cual no revelamos su información, marcas ni productos.",
     "Q2": "¿Por qué comprar con nosotros?",
