@@ -22,6 +22,7 @@ input[type='number']::-webkit-outer-spin-button {
   perspective: 1000px;
   width: 16rem; /* Matches w-64 */
   height: 20rem; /* Matches h-80 */
+  margin: 0 auto;
 }
 
 .flip-card-inner {
