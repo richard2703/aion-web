@@ -1,8 +1,8 @@
 {
   "LocaleSwitcher": {
-    "es": "es",
-    "de": "de",
-    "en": "en",
+    "es": "Español",
+    "de": "Deutsch",
+    "en": "English",
     "label": "Language"
   },
   "Header": {
@@ -181,7 +181,7 @@
   "FaqPage": {
     "title": "Frequently Asked Questions",
     "description": "At aion, we make it possible!",
-    "faq": "FAQs",
+    "faq": "Do you have questions? Find the answers here",
     "Q1": "Who are our clients?",
     "A1": "We maintain a confidentiality agreement with our clients, so we do not disclose their information, brands, or products.",
     "Q2": "Why buy from us?",

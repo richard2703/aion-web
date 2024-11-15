@@ -103,7 +103,7 @@ export default function page() {
           <h2 className="text-3xl font-bold mb-6">{t("discover")}</h2>
           <p className="text-xl mb-8">{t("discover_description")}</p>
           <a
-            href="#"
+            href="/products/tech-specs"
             className="bg-white text-green-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-200 transition"
           >
             {t("discover_button")}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Check, Languages } from "lucide-react";
 import clsx from "clsx";
 import { useTransition } from "react";
@@ -17,9 +17,12 @@ export default function LocaleSwitcherSelect({
   label,
 }: Props) {
   const [isPending, startTransition] = useTransition();
+  const [selectedLocale, setSelectedLocale] = useState(defaultValue);
+  const [isOpen, setIsOpen] = useState(false);
 
-  function onChange(event: React.ChangeEvent<HTMLSelectElement>) {
-    const locale = event.target.value as Locale;
+  function onSelect(locale: Locale) {
+    setSelectedLocale(locale);
+    setIsOpen(false);
     startTransition(() => {
       setUserLocale(locale);
     });
@@ -27,31 +30,42 @@ export default function LocaleSwitcherSelect({
 
   return (
     <div className="relative">
-      <div
+      <button
+        aria-label={label}
+        onClick={() => setIsOpen((prev) => !prev)}
         className={clsx(
-          "flex items-center rounded-sm p-2 transition-colors",
-          "sm:flex-row", // Stack vertically on small screens
+          "flex items-center rounded-sm p-2 transition-colors bg-transparent",
           isPending && "pointer-events-none opacity-60"
         )}
       >
-        <Languages className="h-6 w-6 transition-colors text-white sm:text-sm" />
-        <select
-          defaultValue={defaultValue}
-          aria-label={label}
-          onChange={onChange}
-          className="ml-2 appearance-none bg-transparent text-white border-none focus:border-none rounded sm:text-sm" // Adjust font size for mobile
-        >
+        <img
+          src={`flags/${selectedLocale}.png`}
+          alt={`${selectedLocale} flag`}
+          className="w-4 h-4 mr-2"
+        />
+        <span>
+          {items.find((item) => item.value === selectedLocale)?.label}
+        </span>
+      </button>
+      {isOpen && (
+        <ul className="absolute top-full left-0 mt-1 bg-slate-800 rounded shadow-lg">
           {items.map((item) => (
-            <option
-              key={item.value}
-              value={item.value}
-              className="p-2 bg-slate-800"
-            >
-              {item.label}
-            </option>
+            <li key={item.value}>
+              <button
+                onClick={() => onSelect(item.value as Locale)}
+                className="flex items-center p-2 w-full hover:bg-slate-700"
+              >
+                <img
+                  src={`flags/${item.value}.png`}
+                  alt={`${item.label} flag`}
+                  className="w-4 h-4 mr-2"
+                />
+                <span className="text-lg font-medium">{item.label}</span>
+              </button>
+            </li>
           ))}
-        </select>
-      </div>
+        </ul>
+      )}
     </div>
   );
 }
