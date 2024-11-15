@@ -98,7 +98,7 @@ export default function page() {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-blue-600 text-white py-20">
+      <section className="bg-[#101566] text-white py-20">
         <div className="container mx-auto px-6 max-w-screen-lg text-center">
           <h2 className="text-3xl font-bold mb-6">{t("discover")}</h2>
           <p className="text-xl mb-8">{t("discover_description")}</p>

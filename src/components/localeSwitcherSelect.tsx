@@ -39,11 +39,11 @@ export default function LocaleSwitcherSelect({
         )}
       >
         <img
-          src={`flags/${selectedLocale}.png`}
+          src={`/flags/${selectedLocale}.png`}
           alt={`${selectedLocale} flag`}
           className="w-4 h-4 mr-2"
         />
-        <span>
+        <span className="text-lg font-medium">
           {items.find((item) => item.value === selectedLocale)?.label}
         </span>
       </button>
@@ -56,7 +56,7 @@ export default function LocaleSwitcherSelect({
                 className="flex items-center p-2 w-full hover:bg-slate-700"
               >
                 <img
-                  src={`flags/${item.value}.png`}
+                  src={`/flags/${item.value}.png`}
                   alt={`${item.label} flag`}
                   className="w-4 h-4 mr-2"
                 />
