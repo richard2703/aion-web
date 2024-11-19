@@ -160,7 +160,7 @@ export default function page() {
           </h2>
 
           <Image
-            src="/about/our_team.jpeg"
+            src="/about/staff.jpg"
             alt="Vista general de la fábrica"
             width={1200}
             height={400}
