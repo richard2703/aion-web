@@ -123,13 +123,13 @@ const Footer = () => {
           </p>
           <div className="mt-4 md:mt-0">
             <Link
-              href="/politica-de-privacidad"
+              href="/privacy"
               className="text-gray-300 hover:text-white text-sm mr-4 transition duration-300"
             >
               {t("policy")}
             </Link>
             <Link
-              href="/terminos-y-condiciones"
+              href="/terms"
               className="text-gray-300 hover:text-white text-sm transition duration-300"
             >
               {t("terms")}
