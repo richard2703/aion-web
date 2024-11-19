@@ -97,7 +97,7 @@ const ContactForm: React.FC = () => {
           >
             <option value="">{t("pick_option")}</option>
             <option value="asesor">{t("consultant")}</option>
-            <option value="negocio">{t("Owner")}</option>
+            <option value="negocio">{t("owner")}</option>
             <option value="other">{t("other")}</option>
           </select>
         </div>
@@ -128,7 +128,11 @@ const ContactForm: React.FC = () => {
             />
             <span>
               {t("agree")}{" "}
-              <a href="#" className="text-purple-600 underline">
+              <a
+                href="/privacy"
+                className="text-purple-600 underline"
+                target="_blank"
+              >
                 {t("privacy")}
               </a>
             </span>
