@@ -68,7 +68,7 @@ const Footer = () => {
               <li className="flex items-center">
                 <Phone size={20} className="mr-2" />
                 <a
-                  href="tel:+520000000000"
+                  href="3312938626"
                   className="text-gray-300 hover:text-white transition duration-300"
                 >
                   {t("phone")}
