@@ -192,7 +192,7 @@ export default function Page() {
           </p>
           <div className="flex justify-center">
             <a
-              href="#"
+              href="/contact"
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50"
             >
               {t("get_quote")}
