@@ -89,7 +89,9 @@ export default function page() {
                   {/* Back Side of the Card */}
                   <div className="flip-card-back text-white flex items-center justify-center rounded-lg shadow-lg h-full">
                     <div className="p-6">
-                      <p className="text-gray-600">{tech.description}</p>
+                      <p className="text-gray-600 text-lg font-bold">
+                        {tech.description}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -197,12 +199,12 @@ export default function page() {
                     </svg>
                   </div>
 
-                  <div className="order-2 md:order-1 w-full h-full md:w-3/5 flex items-center">
-                    <div className="p-8  mx-2 md:mx-0 h-full bg-white rounded-lg md:rounded-none md:rounded-l-lg shadow-xl md:shadow-none">
+                  <div className="order-2 md:order-1 w-full h-full md:w-3/5 flex items-center ">
+                    <div className="p-6  mx-2 md:mx-0 h-full bg-white rounded-lg md:rounded-none md:rounded-l-lg shadow-xl md:shadow-none overflow-y-auto">
                       <h3 className="hidden md:block font-bold text-2xl text-gray-800">
                         {resource.name}
                       </h3>
-                      <p className="text-gray-600 text-justify">
+                      <p className="text-gray-600 text-justify font-bold  ">
                         {resource.description}
                       </p>
                     </div>

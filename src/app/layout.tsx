@@ -8,8 +8,21 @@ import Footer from "@/src/components/pagelayout/footer";
 
 export const metadata = {
   title: "aion®",
-  description:
-    "Maquila de suplementos alimenticios de gran clalidad y eficacia",
+  description: "Maquila de suplementos alimenticios de gran calidad y eficacia",
+  keywords: [
+    "suplementos alimenticios",
+    "maquila de suplementos",
+    "productos de alta calidad",
+    "eficacia en suplementos",
+  ],
+  openGraph: {
+    title: "aion®",
+    description:
+      "Maquila de suplementos alimenticios de gran calidad y eficacia",
+    images: ["/Logotipo_AION2bco.png"],
+    locale: "es_MX",
+    type: "website",
+  },
 };
 
 type Props = {
@@ -18,19 +31,15 @@ type Props = {
 
 export default async function RootLayout({ children }: Props) {
   const locale = await getLocale();
-
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
+
   return (
     <html lang={locale}>
       <body className={`${roboto.className} bg-gray-50`}>
-        {/* <div className="bg-top bg-[url('/home-bg.png')] bg-no-repeat bg-cover">
-        </div> */}
         <NextIntlClientProvider messages={messages}>
-          <Header></Header>
+          <Header />
           {children}
-          <Footer></Footer>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
