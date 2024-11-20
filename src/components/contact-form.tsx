@@ -1,10 +1,12 @@
 // TODO: Make this functional and reusable
 import { useTranslations } from "next-intl";
 import { useState, ChangeEvent, FormEvent } from "react";
+import { sendEmail } from "../services/email";
 interface FormData {
   name: string;
   email: string;
   phone: string;
+  profession: string;
   comments: string;
   privacyConsent: boolean;
 }
@@ -15,6 +17,7 @@ const ContactForm: React.FC = () => {
     name: "",
     email: "",
     phone: "",
+    profession: "",
     comments: "",
     privacyConsent: false,
   });
@@ -31,10 +34,34 @@ const ContactForm: React.FC = () => {
     });
   };
 
+  const handleSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // handle form submission logic here, such as sending the form data to a server
     console.log(formData);
+    sendEmail(
+      formData.name,
+      formData.email,
+      formData.phone,
+      formData.profession,
+      formData.comments,
+      formData.privacyConsent
+    );
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      profession: "",
+      comments: "",
+      privacyConsent: false,
+    });
   };
 
   return (
@@ -88,11 +115,14 @@ const ContactForm: React.FC = () => {
         </div>
 
         <div>
-          <label htmlFor="phone" className="block ">
+          <label htmlFor="profession" className="block ">
             {t("profession")}
           </label>
           <select
-            name="phone"
+            name="profession"
+            id="profession"
+            value={formData.profession}
+            onChange={handleSelectChange}
             className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
           >
             <option value="">{t("pick_option")}</option>
