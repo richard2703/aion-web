@@ -8,22 +8,22 @@ export default function page() {
     {
       title: t("survey"),
       description: t("survey_description"),
-      image: "/Münster.jpg",
+      image: "/products/desarrollo 1.jpg",
     },
     {
       title: t("formulation"),
       description: t("formulation_description"),
-      image: "/Münster.jpg",
+      image: "/products/desarrollo 2.jpg",
     },
     {
       title: t("planning"),
       description: t("planning_description"),
-      image: "/Münster.jpg",
+      image: "/products/desarrollo 3.jpg",
     },
     {
       title: t("delivery"),
       description: t("delivery_description"),
-      image: "/Münster.jpg",
+      image: "/products/desarrollo 4.jpg",
     },
   ];
 
