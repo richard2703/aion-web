@@ -1,10 +1,17 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import { Cpu } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function page() {
   const t = useTranslations("TechPage");
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggleSection = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="bg-gray-100 min-h-screen">
       {/* Hero Section */}
@@ -206,27 +213,36 @@ export default function page() {
           </div>
         </div>
       </section>
-      {/* 
-      <div className="relative group h-48 flex   flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-        <a href="#" className="block">
-          <div className="h-28">
-            <div className="absolute -top-20 lg:top-[-10%] left-[5%] z-40  group-hover:top-[-40%] group-hover:opacity-[0.9]   duration-300 w-[90%] h-48 bg-red-500 rounded-xl justify-items-center align-middle">
-              <Image
-                src="/Münster.jpg"
-                alt="Card Image"
-                width={300}
-                height={200}
-                className="rounded-lg shadow-lg"
-              />
+      <section className="bg-[#101566] text-white py-6">
+        <div className="container mx-auto px-6 max-w-screen-lg items-center">
+          {/* Toggle Button */}
+          <button
+            onClick={toggleSection}
+            className="w-full text-left bg-[#0c124d] text-white py-3 px-4 rounded-md hover:bg-[#08103b] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            <span className="text-lg font-bold">
+              {isOpen ? "▼ Ocultar Video" : "▶ Mostrar Video"}
+            </span>
+          </button>
+
+          {/* Collapsible Content */}
+          {isOpen && (
+            <div className="mt-6">
+              <video
+                width="800"
+                height="500"
+                controls
+                className="mx-auto relative top-0 right-0"
+              >
+                <source
+                  src="/technologies/AION_PRESENTACION.mp4"
+                  type="video/mp4"
+                />
+              </video>
             </div>
-          </div>
-          <div className="p-6   z-10 w-full   ">
-            <p className="mb-2 inline-block text-tg text-center w-full  text-xl  font-sans  font-semibold leading-snug tracking-normal   antialiased">
-              Automotive
-            </p>
-          </div>
-        </a>
-      </div> */}
+          )}
+        </div>
+      </section>
     </div>
   );
 }
