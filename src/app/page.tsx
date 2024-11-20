@@ -71,16 +71,23 @@ export default function Page() {
             {t("why_us")}
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               t("point_one"),
               t("point_two"),
               t("point_three"),
               t("point_four"),
+              t("point_five"),
+              t("point_six"),
+              t("point_seven"),
+              t("point_eight"),
+              t("point_nine"),
+              t("point_ten"),
+              t("point_eleven"),
             ].map((reason, index) => (
-              <div key={index} className="flex items-center">
+              <div key={index} className="flex items-center ">
                 <CheckCircle className="text-green-500 mr-4" size={24} />
-                <p className="text-lg">{reason}</p>
+                <p className="text-lg font-semibold">{reason}</p>
               </div>
             ))}
           </div>
@@ -97,18 +104,21 @@ export default function Page() {
             {[
               {
                 id: 1,
-                icon: <Pill className="h-8 w-8 text-blue-600" />,
+                icon: "/home/cicon1.png",
                 description: t("feature_one"),
+                image: "/home/caracteristicas1.JPG",
               },
               {
                 id: 2,
-                icon: <Microscope className="h-8 w-8 text-blue-600" />,
+                icon: "/home/cicon2.png",
                 description: t("feature_two"),
+                image: "/home/caractericas2.jpg",
               },
               {
                 id: 3,
-                icon: <Factory className="h-8 w-8 text-blue-600" />,
+                icon: "/home/cicon3.png",
                 description: t("feature_three"),
+                image: "/home/caracteristica3.jpg",
               },
             ].map((feature) => (
               <div key={feature.id} className="flip-card">
@@ -118,7 +128,7 @@ export default function Page() {
                   <div className="flip-card-front text-white flex items-center justify-center rounded-lg shadow-lg">
                     <div>
                       <Image
-                        src="/Münster.jpg"
+                        src={feature.image}
                         alt="Card Image"
                         width={600}
                         height={800}
@@ -130,10 +140,18 @@ export default function Page() {
                   {/* Back Side of the Card */}
                   <div className="flip-card-back text-white flex items-center justify-center rounded-lg shadow-lg">
                     <div className="p-6">
-                      <div className="flex items-center justify-center w-12 rounded-md bg-blue-100 mb-4">
-                        {feature.icon}
+                      <div className="flex items-center justify-center w-10 h-10 rounded-md bg-blue-100 mb-4">
+                        <Image
+                          src={feature.icon}
+                          alt="Card Image"
+                          width={32}
+                          height={32}
+                          className="rounded-lg shadow-lg"
+                        />
                       </div>
-                      <p className="text-gray-600">{feature.description}</p>
+                      <p className="text-lg text-gray-600 font-semibold ">
+                        {feature.description}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -157,20 +175,17 @@ export default function Page() {
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {testimonial.map((testimonial, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-6 shadow">
-                <p className="text-gray-600 mb-4">"{testimonial.text}"</p>
+                <p className="text-gray-600 mb-4 font-semibold">
+                  "{testimonial.text}"
+                </p>
                 <div className="flex items-center">
-                  <div className="flex-shrink-0">
-                    <img
-                      className="h-10 w-10 rounded-full"
-                      src={`https://i.pravatar.cc/150?img=${index + 1}`}
-                      alt={testimonial.name}
-                    />
-                  </div>
                   <div className="ml-3">
-                    <p className="text-sm font-medium text-gray-900">
+                    <p className="text-sm font-medium text-gray-900 font-semibold">
                       {testimonial.name}
                     </p>
-                    <p className="text-sm text-gray-500">{testimonial.job}</p>
+                    <p className="text-sm text-gray-800 font-semibold">
+                      {testimonial.job}
+                    </p>
                   </div>
                 </div>
               </div>
