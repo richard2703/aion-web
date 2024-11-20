@@ -13,12 +13,12 @@ export default function page() {
     {
       title: t("formulation"),
       description: t("formulation_description"),
-      image: "/products/desarrollo 2.jpg",
+      image: "/products/desarrollo 3.jpg",
     },
     {
       title: t("planning"),
       description: t("planning_description"),
-      image: "/products/desarrollo 3.jpg",
+      image: "/products/desarrollo 2.jpg",
     },
     {
       title: t("delivery"),
