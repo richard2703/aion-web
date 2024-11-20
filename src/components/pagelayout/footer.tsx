@@ -17,8 +17,8 @@ const Footer = () => {
 
   const navItems = [
     { name: t("home"), href: "/" },
-    { name: t("products"), href: "/products" },
     { name: t("about"), href: "/about" },
+    { name: t("products"), href: "/products" },
     { name: t("technology"), href: "/technology" },
     { name: t("contact"), href: "/contact" },
     // { name: t("news"), href: "/news" },

@@ -164,7 +164,9 @@
     "Operational_excellence": "Operational Excellence",
     "Operational_excellence_description": "We all work under the same concept: 'PDCA'. We Plan our goals, Develop our processes, Check our results, and Act accordingly.",
     "distribution_network": "Distribution Network",
-    "distribution_network_description": "Distribution Network"
+    "distribution_network_description": "Distribution Network",
+    "show": "Show video of presentation",
+    "hide": "Hide video of presentation"
   },
   "ContactPage": {
     "title": "Contact",

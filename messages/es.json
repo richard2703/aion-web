@@ -164,7 +164,9 @@
     "Operational_excellence": "Excelencia Operativa",
     "Operational_excellence_description": "Todos trabajamos bajo un mismo concepto “PDCA”, Planeamos nuestros objetivos, Desarrollamos nuestros procesos, Comprobamos nuestros resultados y Actuamos en consecuencia.",
     "distribution_network": "Red de Distribución",
-    "distribution_network_description": "Red de Distribución"
+    "distribution_network_description": "Red de Distribución",
+    "show": "Mostrar video de presentación",
+    "hide": "Ocultar video de presentación"
   },
   "ContactPage": {
     "title": "Contacto",

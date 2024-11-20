@@ -218,10 +218,10 @@ export default function page() {
           {/* Toggle Button */}
           <button
             onClick={toggleSection}
-            className="w-full text-left bg-[#0c124d] text-white py-3 px-4 rounded-md hover:bg-[#08103b] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="w-full text-left bg-[#101566] text-white py-3 px-4 rounded-md hover:bg-[#08103b] focus:outline-none focus:ring-2 focus:ring-offset-2 text-center"
           >
             <span className="text-lg font-bold">
-              {isOpen ? "▼ Ocultar Video" : "▶ Mostrar Video"}
+              {isOpen ? `▼ ${t("hide")}` : `▶ ${t("show")}`}
             </span>
           </button>
 
