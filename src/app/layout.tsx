@@ -54,7 +54,7 @@ export default async function RootLayout({ children }: Props) {
         <meta name="keywords" content={metadata.keywords.join(", ")} />
         <meta name="author" content="aion®" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://your-website.com" />
+        <link rel="canonical" href="https://aionsuplementos.com" />
 
         {/* Open Graph */}
         <meta property="og:title" content={metadata.openGraph.title} />
