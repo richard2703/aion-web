@@ -22,6 +22,37 @@ export default function page() {
         </div>
       </section>
 
+      <section className="bg-gray-200 py-6">
+        <div className="container mx-auto px-6 max-w-screen-lg items-center">
+          {/* Toggle Button */}
+          <button
+            onClick={toggleSection}
+            className="w-full text-left bg-gray-200 py-3 px-4 rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 text-center"
+          >
+            <span className="text-lg font-bold">
+              {isOpen ? `▼ ${t("hide")}` : `▶ ${t("show")}`}
+            </span>
+          </button>
+
+          {/* Collapsible Content */}
+          {isOpen && (
+            <div className="mt-6">
+              <video
+                width="800"
+                height="500"
+                controls
+                className="mx-auto relative top-0 right-0"
+              >
+                <source
+                  src="/technologies/AION_PRESENTACION.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          )}
+        </div>
+      </section>
+
       {/* Core Technologies */}
       <section className="py-20">
         <div className="container mx-auto max-w-screen-lg">
@@ -213,36 +244,6 @@ export default function page() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-      <section className="bg-[#101566] text-white py-6">
-        <div className="container mx-auto px-6 max-w-screen-lg items-center">
-          {/* Toggle Button */}
-          <button
-            onClick={toggleSection}
-            className="w-full text-left bg-[#101566] text-white py-3 px-4 rounded-md hover:bg-[#08103b] focus:outline-none focus:ring-2 focus:ring-offset-2 text-center"
-          >
-            <span className="text-lg font-bold">
-              {isOpen ? `▼ ${t("hide")}` : `▶ ${t("show")}`}
-            </span>
-          </button>
-
-          {/* Collapsible Content */}
-          {isOpen && (
-            <div className="mt-6">
-              <video
-                width="800"
-                height="500"
-                controls
-                className="mx-auto relative top-0 right-0"
-              >
-                <source
-                  src="/technologies/AION_PRESENTACION.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-          )}
         </div>
       </section>
     </div>
