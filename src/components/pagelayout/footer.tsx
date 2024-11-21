@@ -59,7 +59,7 @@ const Footer = () => {
               <li className="flex items-center">
                 <Mail size={20} className="mr-2" />
                 <a
-                  href="mailto:info@tuempresa.com"
+                  href="mailto:maquilas@aionsuplementos.com"
                   className="text-gray-300 hover:text-white transition duration-300"
                 >
                   {t("email")}
