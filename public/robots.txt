@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /_next/
+Disallow: /static/
+Disallow: /public/
+Disallow: /node_modules/
+Disallow: /README.md
+Disallow: /package.json
+Disallow: /next.config.js
+
+Sitemap: https://aionsuplementos.com/sitemap.xml
