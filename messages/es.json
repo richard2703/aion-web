@@ -80,7 +80,9 @@
     "team_description": "Nuestro equipo multidisciplinario de expertos en formulación y nutrición se dedica a la investigación y la innovación. Con un profundo conocimiento de las tendencias del mercado, desarrollamos productos que cumplen con altos estándares y resuenan con los consumidores. La colaboración con nuestros clientes asegura que cada producto se alinee con las demandas del mercado y las necesidades del usuario final.",
     "discover": "¡Descubre los suplementos que tenemos para ti!",
     "discover_description": "Contáctenos hoy mismo para obtener más información sobre nuestras fórmulas personalizadas y con nuestra experiencia, como podemos ayudarle a llevar su marca al siguiente nivel. Solicite una asesoría gratuita y comienza a transformar tus ideas en productos de alta calidad, ¡Estamos aquí para ayudarte!",
-    "discover_button": "Nuestros productos"
+    "discover_button": "Nuestros productos",
+    "show": "Mostrar video de presentación",
+    "hide": "Ocultar video de presentación"
   },
   "AboutPage": {
     "title": "Nuestra Historia",
@@ -164,9 +166,7 @@
     "Operational_excellence": "Excelencia Operativa",
     "Operational_excellence_description": "Todos trabajamos bajo un mismo concepto “PDCA”, Planeamos nuestros objetivos, Desarrollamos nuestros procesos, Comprobamos nuestros resultados y Actuamos en consecuencia.",
     "distribution_network": "Red de Distribución",
-    "distribution_network_description": "Red de Distribución",
-    "show": "Mostrar video de presentación",
-    "hide": "Ocultar video de presentación"
+    "distribution_network_description": "Red de Distribución"
   },
   "ContactPage": {
     "title": "Contacto",

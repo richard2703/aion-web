@@ -80,7 +80,9 @@
     "team_description": "Our multidisciplinary team of formulation and nutrition experts is dedicated to research and innovation. With a deep understanding of market trends, we develop products that meet high standards and resonate with consumers. Collaboration with our clients ensures that each product aligns with market demands and end-user needs.",
     "discover": "Discover the supplements we have for you!",
     "discover_description": "Contact us today to learn more about our customized formulas and, with our experience, how we can help you take your brand to the next level. Request a free consultation and start transforming your ideas into high quality products, we are here to help!",
-    "discover_button": "Our Products"
+    "discover_button": "Our Products",
+    "show": "Show video of presentation",
+    "hide": "Hide video of presentation"
   },
   "AboutPage": {
     "title": "Our History",
@@ -164,9 +166,7 @@
     "Operational_excellence": "Operational Excellence",
     "Operational_excellence_description": "We all work under the same concept: 'PDCA'. We Plan our goals, Develop our processes, Check our results, and Act accordingly.",
     "distribution_network": "Distribution Network",
-    "distribution_network_description": "Distribution Network",
-    "show": "Show video of presentation",
-    "hide": "Hide video of presentation"
+    "distribution_network_description": "Distribution Network"
   },
   "ContactPage": {
     "title": "Contact",
