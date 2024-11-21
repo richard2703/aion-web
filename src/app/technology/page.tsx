@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import { Cpu } from "lucide-react";
@@ -6,11 +5,6 @@ import { useTranslations } from "next-intl";
 
 export default function page() {
   const t = useTranslations("TechPage");
-  const [isOpen, setIsOpen] = useState(true);
-
-  const toggleSection = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
     <div className="bg-gray-100 min-h-screen">
@@ -19,37 +13,6 @@ export default function page() {
         <div className="container mx-auto px-6 max-w-screen-lg">
           <h1 className="text-4xl font-bold mb-4">{t("title")}</h1>
           <p className="text-xl">{t("description")}</p>
-        </div>
-      </section>
-
-      <section className="bg-gray-200 py-6">
-        <div className="container mx-auto px-6 max-w-screen-lg items-center">
-          {/* Toggle Button */}
-          <button
-            onClick={toggleSection}
-            className="w-full text-left bg-gray-200 py-3 px-4 rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 text-center"
-          >
-            <span className="text-lg font-bold">
-              {isOpen ? `▼ ${t("hide")}` : `▶ ${t("show")}`}
-            </span>
-          </button>
-
-          {/* Collapsible Content */}
-          {isOpen && (
-            <div className="mt-6">
-              <video
-                width="800"
-                height="500"
-                controls
-                className="mx-auto relative top-0 right-0"
-              >
-                <source
-                  src="/technologies/AION_PRESENTACION.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-          )}
         </div>
       </section>
 
