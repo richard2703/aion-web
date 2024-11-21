@@ -8,20 +8,33 @@ import Footer from "@/src/components/pagelayout/footer";
 
 export const metadata = {
   title: "aion®",
-  description: "Maquila de suplementos alimenticios de gran calidad y eficacia",
+  description:
+    "Con más de 30 años de experiencia. Nuestro compromiso se centra en desarrollar productos de alta calidad y eficacia, adaptados a las necesidades de tu producto.",
   keywords: [
+    "aion",
+    "aion suplementos",
     "suplementos alimenticios",
     "maquila de suplementos",
     "productos de alta calidad",
     "eficacia en suplementos",
+    "producción de suplementos",
+    "fabricación personalizada",
   ],
   openGraph: {
     title: "aion®",
     description:
-      "Maquila de suplementos alimenticios de gran calidad y eficacia",
-    images: ["/Logotipo_AION2bco.png"],
+      "Con más de 30 años de experiencia. Nuestro compromiso se centra en desarrollar productos de alta calidad y eficacia, adaptados a las necesidades de tu producto.",
+    images: [
+      {
+        url: "/Logotipo_AION2bco.png",
+        width: 1200,
+        height: 630,
+        alt: "Logo de aion",
+      },
+    ],
     locale: "es_MX",
     type: "website",
+    site_name: "aion",
   },
 };
 
@@ -35,6 +48,54 @@ export default async function RootLayout({ children }: Props) {
 
   return (
     <html lang={locale}>
+      <head>
+        {/* Basic SEO */}
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords.join(", ")} />
+        <meta name="author" content="aion®" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://your-website.com" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta
+          property="og:description"
+          content={metadata.openGraph.description}
+        />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta
+          property="og:image:width"
+          content={metadata.openGraph.images[0].width.toString()}
+        />
+        <meta
+          property="og:image:height"
+          content={metadata.openGraph.images[0].height.toString()}
+        />
+        <meta property="og:locale" content={metadata.openGraph.locale} />
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:site_name" content={metadata.openGraph.site_name} />
+
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+      </head>
       <body className={`${roboto.className} bg-gray-50`}>
         <NextIntlClientProvider messages={messages}>
           <Header />
