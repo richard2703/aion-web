@@ -17,8 +17,8 @@ const Footer = () => {
 
   const navItems = [
     { name: t("home"), href: "/" },
-    { name: t("products"), href: "/products" },
     { name: t("about"), href: "/about" },
+    { name: t("products"), href: "/products" },
     { name: t("technology"), href: "/technology" },
     { name: t("contact"), href: "/contact" },
     // { name: t("news"), href: "/news" },
@@ -59,7 +59,7 @@ const Footer = () => {
               <li className="flex items-center">
                 <Mail size={20} className="mr-2" />
                 <a
-                  href="mailto:info@tuempresa.com"
+                  href="mailto:maquilas@aionsuplementos.com"
                   className="text-gray-300 hover:text-white transition duration-300"
                 >
                   {t("email")}
@@ -68,7 +68,7 @@ const Footer = () => {
               <li className="flex items-center">
                 <Phone size={20} className="mr-2" />
                 <a
-                  href="tel:+520000000000"
+                  href="tel:+523312938626"
                   className="text-gray-300 hover:text-white transition duration-300"
                 >
                   {t("phone")}

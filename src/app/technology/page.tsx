@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import { Cpu } from "lucide-react";
@@ -6,11 +5,6 @@ import { useTranslations } from "next-intl";
 
 export default function page() {
   const t = useTranslations("TechPage");
-  const [isOpen, setIsOpen] = useState(true);
-
-  const toggleSection = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
     <div className="bg-gray-100 min-h-screen">
@@ -89,7 +83,9 @@ export default function page() {
                   {/* Back Side of the Card */}
                   <div className="flip-card-back text-white flex items-center justify-center rounded-lg shadow-lg h-full">
                     <div className="p-6">
-                      <p className="text-gray-600">{tech.description}</p>
+                      <p className="text-gray-600 text-lg font-bold">
+                        {tech.description}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -197,12 +193,12 @@ export default function page() {
                     </svg>
                   </div>
 
-                  <div className="order-2 md:order-1 w-full h-full md:w-3/5 flex items-center">
-                    <div className="p-8  mx-2 md:mx-0 h-full bg-white rounded-lg md:rounded-none md:rounded-l-lg shadow-xl md:shadow-none">
+                  <div className="order-2 md:order-1 w-full h-full md:w-3/5 flex items-center ">
+                    <div className="p-6  mx-2 md:mx-0 h-full bg-white rounded-lg md:rounded-none md:rounded-l-lg shadow-xl md:shadow-none overflow-y-auto">
                       <h3 className="hidden md:block font-bold text-2xl text-gray-800">
                         {resource.name}
                       </h3>
-                      <p className="text-gray-600 text-justify">
+                      <p className="text-gray-600 text-justify font-bold  ">
                         {resource.description}
                       </p>
                     </div>
@@ -211,36 +207,6 @@ export default function page() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-      <section className="bg-[#101566] text-white py-6">
-        <div className="container mx-auto px-6 max-w-screen-lg items-center">
-          {/* Toggle Button */}
-          <button
-            onClick={toggleSection}
-            className="w-full text-left bg-[#0c124d] text-white py-3 px-4 rounded-md hover:bg-[#08103b] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-          >
-            <span className="text-lg font-bold">
-              {isOpen ? "▼ Ocultar Video" : "▶ Mostrar Video"}
-            </span>
-          </button>
-
-          {/* Collapsible Content */}
-          {isOpen && (
-            <div className="mt-6">
-              <video
-                width="800"
-                height="500"
-                controls
-                className="mx-auto relative top-0 right-0"
-              >
-                <source
-                  src="/technologies/AION_PRESENTACION.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-          )}
         </div>
       </section>
     </div>

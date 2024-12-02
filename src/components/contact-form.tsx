@@ -1,10 +1,16 @@
 // TODO: Make this functional and reusable
+"use client";
 import { useTranslations } from "next-intl";
 import { useState, ChangeEvent, FormEvent } from "react";
+import { toast } from "nextjs-toast-notify";
+import "nextjs-toast-notify/dist/nextjs-toast-notify.css";
+import { sendEmail } from "../services/email";
+
 interface FormData {
   name: string;
   email: string;
   phone: string;
+  profession: string;
   comments: string;
   privacyConsent: boolean;
 }
@@ -15,6 +21,7 @@ const ContactForm: React.FC = () => {
     name: "",
     email: "",
     phone: "",
+    profession: "",
     comments: "",
     privacyConsent: false,
   });
@@ -31,10 +38,61 @@ const ContactForm: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // handle form submission logic here, such as sending the form data to a server
-    console.log(formData);
+    try {
+      // Handle form submission logic, such as sending the form data to a server
+      await sendEmail(
+        formData.name,
+        formData.email,
+        formData.phone,
+        formData.profession,
+        formData.comments,
+        formData.privacyConsent
+      );
+
+      // Reset form data
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        profession: "",
+        comments: "",
+        privacyConsent: false,
+      });
+
+      // Show success toast
+      toast.success("¡La operación se realizó con éxito!", {
+        duration: 4000,
+        progress: true,
+        position: "top-right",
+        transition: "swingInverted",
+        icon: "",
+        sonido: true,
+      });
+
+      // Redirect to success page
+      window.location.href = "/";
+    } catch (error) {
+      console.log({ error });
+
+      toast.error("¡Algo salió mal. Por favor, intenta de nuevo.!", {
+        duration: 4000,
+        progress: true,
+        position: "top-right",
+        transition: "swingInverted",
+        icon: "",
+        sonido: true,
+      });
+    }
   };
 
   return (
@@ -52,6 +110,7 @@ const ContactForm: React.FC = () => {
             onChange={handleChange}
             className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
             placeholder="Tu nombre"
+            required
           />
         </div>
 
@@ -67,6 +126,7 @@ const ContactForm: React.FC = () => {
             onChange={handleChange}
             className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
             placeholder="Tu correo electrónico"
+            required
           />
         </div>
 
@@ -83,17 +143,22 @@ const ContactForm: React.FC = () => {
               onChange={handleChange}
               className="w-full p-2 border border-gray-300 rounded-r-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
               placeholder="Teléfono"
+              required
             />
           </div>
         </div>
 
         <div>
-          <label htmlFor="phone" className="block ">
+          <label htmlFor="profession" className="block ">
             {t("profession")}
           </label>
           <select
-            name="phone"
+            name="profession"
+            id="profession"
+            value={formData.profession}
+            onChange={handleSelectChange}
             className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
+            required
           >
             <option value="">{t("pick_option")}</option>
             <option value="asesor">{t("consultant")}</option>
