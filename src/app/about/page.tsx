@@ -57,6 +57,50 @@ export default function page() {
         </div>
       </section>
 
+      <section className="py-12">
+        <div className="container mx-auto px-6 max-w-screen-lg"></div>
+      </section>
+
+      <section className="bg-gray-200 py-20">
+        <div className="container mx-auto max-w-screen-lg">
+          <div className=" gap-10">
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <h3 className="text-center text-2xl font-bold mb-4 text-purple-600">
+                {t("quality_policies")}
+              </h3>
+              <p className="text-xl mt-2 text-black text-justify">
+                {t("quality_policies_paragraph_1")}
+              </p>
+              <ul className="list-inside mt-4 text-xl mt-2 text-black text-justify gap-2">
+                <li className="my-1">
+                  <span className="font-bold">{t("principle_head_1")}</span>
+                  {t("quality_policies_principle_1")}
+                </li>
+                <li className="my-1">
+                  <span className="font-bold">{t("principle_head_2")}</span>
+                  {t("quality_policies_principle_2")}
+                </li>
+                <li className="my-1">
+                  <span className="font-bold">{t("principle_head_3")}</span>
+                  {t("quality_policies_principle_3")}
+                </li>
+                <li className="my-1">
+                  <span className="font-bold">{t("principle_head_4")}</span>
+                  {t("quality_policies_principle_4")}
+                </li>
+                <li className="my-1">
+                  <span className="font-bold">{t("principle_head_5")}</span>
+                  {t("quality_policies_principle_5")}
+                </li>
+              </ul>
+              <p className="text-xl mt-2 text-black text-justify">
+                {t("quality_policies_paragraph_2")}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Company Stats */}
       <section className="py-20">
         <div className="container mx-auto px-6 max-w-screen-lg">
