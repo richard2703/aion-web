@@ -15,17 +15,6 @@ export default function page() {
     }
   }, []);
 
-  const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
   return (
     <div className="bg-gradient-to-b from-purple-300 to-white min-h-screen">
       <div className="container mx-auto px-4">
@@ -38,10 +27,6 @@ export default function page() {
             <video
               ref={videoRef}
               className="w-full h-full object-contain"
-              onClick={togglePlay}
-              autoPlay
-              muted
-              playsInline
               controls
             >
               <source src="/AshleyFit/AshleyFitVideo.mp4" type="video/mp4" />
