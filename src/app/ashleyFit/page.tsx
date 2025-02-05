@@ -40,6 +40,7 @@ export default function page() {
               className="w-full h-full object-contain"
               onClick={togglePlay}
               autoPlay
+              muted
               playsInline
               controls
             >
