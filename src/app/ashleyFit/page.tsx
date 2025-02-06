@@ -11,10 +11,7 @@ export default function page() {
         <div className="relative w-full h-[calc(100vh-12rem)] rounded-2xl overflow-hidden shadow-2xl bg-black/5 backdrop-blur-sm">
           <div className="absolute inset-0 flex items-center justify-center">
             <video className="w-full h-full object-contain" controls>
-              <source
-                src="/technologies/AION_PRESENTACION.mp4"
-                type="video/mp4"
-              />
+              <source src="/media/ashley.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
