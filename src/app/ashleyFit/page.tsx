@@ -1,20 +1,6 @@
-"use client";
-import { useState, useRef, useEffect } from "react";
+import React from "react";
 
 export default function page() {
-  const [isPlaying, setIsPlaying] = useState(true);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch((error: any) => {
-        // Handle any autoplay restrictions
-        console.log("Autoplay was prevented:", error);
-        setIsPlaying(false);
-      });
-    }
-  }, []);
-
   return (
     <div className="bg-gradient-to-b from-purple-300 to-white min-h-screen">
       <div className="container mx-auto px-4">
@@ -24,12 +10,11 @@ export default function page() {
 
         <div className="relative w-full h-[calc(100vh-12rem)] rounded-2xl overflow-hidden shadow-2xl bg-black/5 backdrop-blur-sm">
           <div className="absolute inset-0 flex items-center justify-center">
-            <video
-              ref={videoRef}
-              className="w-full h-full object-contain"
-              controls
-            >
-              <source src="/AshleyFit/AshleyFitVideo.mp4" type="video/mp4" />
+            <video className="w-full h-full object-contain" controls>
+              <source
+                src="/technologies/AION_PRESENTACION.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
         </div>
