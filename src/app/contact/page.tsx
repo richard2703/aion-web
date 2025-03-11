@@ -25,7 +25,7 @@ export default function page() {
             {t("subtitle")}
           </h2>
           <h3 className="text-2xl text-center mb-8">{t("contact_us")}</h3>
-          <ContactForm />
+          <ContactForm type="ContactForm" />
         </div>
       </section>
 

@@ -8,6 +8,7 @@ import {
   Mail,
   Phone,
   MapPin,
+  BriefcaseBusiness,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -77,6 +78,15 @@ const Footer = () => {
               <li className="flex items-center">
                 <MapPin size={20} className="mr-2" />
                 <span className="text-gray-300">{t("address")}</span>
+              </li>
+              <li className="flex items-center">
+                <BriefcaseBusiness size={20} className="mr-2" />
+                <Link
+                  href="/jobs"
+                  className="text-gray-300 hover:text-white transition duration-300"
+                >
+                  <span>{t("work")}</span>
+                </Link>
               </li>
             </ul>
           </div>
