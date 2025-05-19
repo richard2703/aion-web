@@ -49,7 +49,7 @@ export default function Page() {
           <h1 className="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
             {t("title")}
           </h1>
-          <p className="mt-6 max-w-2xl mx-auto text-xl text-indigo-100 h-20">
+          <p className="mt-6 w-full mx-auto text-xl text-indigo-100 h-full">
             {text}
           </p>
           <div className="mt-10">
